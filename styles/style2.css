@@ -1,0 +1,245 @@
+:root {
+    --color-principal: rgb(0, 0, 0);
+    --color-gold: rgb(196, 158, 92);
+    --color-white: rgb(255, 255, 255);
+    --color-gray: rgb(30, 30, 30); 
+    --color-orange: rgb(255, 115, 0);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 400px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: var(--color-principal);
+    overflow-x: hidden;
+}
+.cabecera{
+    width: 100%;
+    margin: 1rem auto 0.5rem auto;
+
+}
+
+.logo{
+    width: 15%;
+    margin: 1rem auto 0.5rem 2rem;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+
+
+.activa{
+    color: rgb(19, 157, 23);
+}
+ /* NAV - MENÚ */
+.nav {
+    background-color: var(--color-orange);
+}
+/* Links del menú */
+.nav a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    color: var(--color-gold);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+}
+/* Desplegable del menú */
+.desplegable {
+    float: left;
+    overflow: hidden;
+    color: var(--color-gold);
+    /* background-color: var(--color-principal);*/
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    padding: .5rem 2rem;
+}
+.desplegable:hover a{
+    opacity: 0.6;
+
+}
+/* Símbolo desplegable */
+.fa-caret-down {
+    margin-left: .5rem;
+}
+/* Contenido del desplegable */
+.desplegable-contenido {
+    display: none;
+    position: absolute;
+    /* background-color: var(--color-white); */
+    margin-top: .5rem;
+}
+/* Links del desplegable */
+.desplegable-contenido a {
+    text-decoration: none;
+    float: none;
+    display: block;
+    text-align: left;
+}
+/* Hover */
+.nav a:hover {
+    /* background-color: #E77218; */
+    opacity: 0.6;
+
+}
+/* Mostrar desplegable */
+.desplegable:hover .desplegable-contenido {
+    display: block;
+}
+/* Para la página activa */
+
+
+
+
+/* Escondemos el icono que desplegará el nav en dispositivos pequeños */
+.nav button {
+   display: none;
+}
+/* Media queries específicas para el menú en dispositivos pequeños */
+@media screen and (max-width: 600px) {
+    .nav a, .desplegable {
+        display: none;
+    }
+    .nav button {
+        display: block;
+        font-size: 2rem;
+        padding: .2rem;
+        background-color: #1A3451;
+        color: #FAFAFA;
+        border: none;
+        cursor: pointer;
+        margin-left: .5rem;
+    }
+    /* Clase .responsivo habilitada mediante JavaScript */
+    .nav.responsivo {
+        position: relative;
+    }
+    .nav.responsivo button {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .nav.responsivo a {
+        display: block;
+        float: none;
+        text-align: left;
+        margin-left: 3rem;
+    }
+    .nav.responsivo .desplegable {
+        float: none;
+    }
+    .nav.responsivo .desplegable-contenido {
+        position: relative;
+    }
+    .nav.responsivo .desplegable {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 3rem;
+    }
+    .nav.responsivo .desplegable:hover {
+        background-color: #1A3451;
+    }
+}
+
+
+.imgFondo{
+    background-image: url("images/img-01.jpg");
+    background-color: var(--color-orange);
+    background-blend-mode: luminosity;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2rem;
+}
+
+
+
+/* ****************************************** FOOTER ****************** */
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-principal);
+    text-align: center;
+    color: var(--color-gold);
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "copyright cookies redes";
+    justify-items: center;
+    align-items: center;
+}
+
+.copyright{
+    grid-area: copyright;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.cookies{
+    grid-area: cookies;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.cookies ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cookies a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: var(--color-gold);
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.redes a{
+    display: grid;
+    margin-right: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+.redes img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.redes a:hover, .redesContacto a:hover, .cookies a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+    footer{
+        grid-template-areas: "redes"
+                            "cookies"
+                            "copyright";
+    }
+}

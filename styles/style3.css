@@ -1,0 +1,205 @@
+:root {
+    --color-principal: rgb(0, 0, 0);
+    --color-gold: rgb(196, 158, 92);
+    --color-white: rgb(255, 255, 255);
+    --color-gray: rgb(118, 116, 116);
+    --color-orange: rgb(255, 115, 0);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: var(--color-principal);
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    color: var(--color-principal);
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-principal);
+}
+/* ****************************************** HEADER ****************************************** */
+header {
+    width: 100%;
+    margin: 5px auto;
+}
+.cabecera{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 20%;
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    .cabecera{
+        grid-template-columns: 1fr;
+    }
+    .logo{
+        width: 35%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .cabecera{
+        width: 1200px;
+        margin: 0px auto;
+    }
+}
+
+/* ****************************************** NAV ****************************************** */
+nav{
+    width: 100%;
+    margin: 0px auto;
+}
+.menu{
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1rem;
+}
+nav ul li a, .desplegable {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-gold);
+}
+a:hover {
+    opacity: 0.6;
+}
+
+
+
+
+
+.container {
+    position: relative;
+}
+.center {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*font-size: 38px;*/
+}
+.imgFondo{
+    width: 100%;
+    height: auto;
+}
+
+.buscar{
+    padding: 1rem;
+    margin: 1rem .2rem;
+    border: 0px solid white;
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    box-shadow: 0px 0px 5px;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* ****************************************** FOOTER ****************** */
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-principal);
+    text-align: center;
+    color: var(--color-gold);
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: "copyright cookies redes";
+    justify-items: center;
+    align-items: center;
+}
+
+.copyright{
+    grid-area: copyright;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.cookies{
+    grid-area: cookies;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.cookies ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cookies a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: var(--color-gold);
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.redes a{
+    display: grid;
+    margin-right: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+.redes img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.redes a:hover, .redesContacto a:hover, .cookies a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+    footer{
+        grid-template-areas: "redes"
+                            "cookies"
+                            "copyright";
+    }
+}
