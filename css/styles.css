@@ -27,6 +27,7 @@ body {
     background-color: var(--color-principal);
 }
 
+
 h1{
     font-size: 2rem;
     font-weight: 500;
@@ -40,10 +41,15 @@ h2{
     text-align: center;
     color: var(--color-principal);
 }
+h3{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-principal);
+}
 /* ****************************************** HEADER ****************************************** */
 header {
     width: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: var(--color-principal);
 }
 
@@ -67,18 +73,18 @@ header {
 @media screen and (min-width: 1200px) {
     .cabecera{
         width: 1200px;
-        margin: 0px auto;
+        margin: 0 auto;
     }
 }
 
 /* ****************************************** NAV ****************************************** */
 nav{
     width: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 .menu{
     width: 50%;
-    margin: 0px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,7 +99,7 @@ nav ul li a, .desplegable {
     text-align: center;
     color: var(--color-gold);
 }
-nav ul li a h4 {
+nav ul li h4 {
     font-size: 0.8rem;
     font-weight: 300;
     text-decoration: none;
@@ -106,11 +112,12 @@ a:hover {
 
 /* ****************************************** SECTION ****************************************** */
 
-/* ********************* BUSCAR ****************** */
-
 main{
+    background-color: rgb(197, 194, 178);
+    
+}
+.main-index{
     background-image: url("../images/img-01.jpg");
-    background-color: var(--color-white);
     width: 100%;
     height: auto; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -119,6 +126,7 @@ main{
     background-attachment: fixed;
 }
 
+/* ********************* BUSCAR ****************** */
 .seccion-buscar {
     padding-top: 8rem;
     padding-bottom: 15rem;
@@ -126,13 +134,49 @@ main{
     /*font-size: 38px;*/
 }
 
-.cuadro-buscar{
+.cuadro-form{
     padding: 1rem;
     margin: 1rem .2rem 5rem .2rem;
-    border: 0px solid white;
+    border: 0 solid white;
     background-color: var(--color-white);
     color: var(--color-gray);
     box-shadow: 0px 0px 5px var(--color-gray);
+}
+
+/* ********************* ALTA ****************** */
+
+.seccion-alta {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    background-color: rgb(197, 194, 178);
+}
+
+.alta{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 0 solid white;
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    box-shadow: 0 0 5px var(--color-gray);
+    cursor: pointer;
+}
+
+.seccion-alta h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    color: var(--color-principal);
+}
+.seccion-alta h2{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-principal);
+}
+input[type=text]:focus, [type=email]:focus, [type=password]:focus{
+    background-color: rgb(197, 194, 178);
 }
 
 /* ********************* FICHAS ****************** */
@@ -161,7 +205,7 @@ main{
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0px 0px 5px var(--color-gray);
+    box-shadow: 0 0 5px var(--color-gray);
     background-color: var(--color-white);
     text-align: center;
     color: var(--color-gray);

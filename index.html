@@ -5,7 +5,7 @@
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/style.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- definición de los textos -->
@@ -68,36 +68,36 @@
         <button class="icono" onclick="despliega()">&#9776;</button><!-- Botón que se despliega con enlace al resto de las páginas de nuestra web ->
     </nav1>
     -->
-    <main>
+    <main class="main-index">
     <!-- ****************************************** SECTION BUSCAR ****************************************** -->
         <section class="seccion-buscar">
             <div>
                 <h1>Búsqueda de inmuebles</h1>
                 <h2>Encuentre aquí su casa de ensueño</h2>
                 <form>  
-                    <select id="ciudad" name="ciudad" class="cuadro-buscar">
+                    <select id="ciudad" name="ciudad" class="cuadro-form">
                         <option value="">Ciudad</option>
                         <option value="malaga">Malaga</option>
                         <option value="marid">Madrid</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="cantabria">Cantabria</option>
                     </select>
-                    <select id="tipo" name="tipo" class="cuadro-buscar">
+                    <select id="tipo" name="tipo" class="cuadro-form">
                         <option value="">Tipo de inmueble</option>
                         <option value="apto">Apartamento</option>
                         <option value="chalet">Chalet</option>
                         <option value="campo">Casa de campo</option>
                         <option value="atico">Ático</option>
                     </select>
-                    <select id="room" name="room" class="cuadro-buscar">
+                    <select id="room" name="room" class="cuadro-form">
                         <option value="">Habitaciones</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    <input class="cuadro-buscar" type="reset" value="Borrar">
-                    <input class="cuadro-buscar" type="submit" id="submit-btn" value="Buscar">
+                    <input class="cuadro-form" type="reset" value="Borrar">
+                    <input class="cuadro-form" type="submit" id="submit-btn" value="Buscar">
                 </form>
             </div>  
         </section>
