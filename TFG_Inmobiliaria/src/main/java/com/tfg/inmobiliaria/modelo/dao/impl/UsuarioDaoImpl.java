@@ -28,4 +28,15 @@ public class UsuarioDaoImpl implements IntUsuarioDao{
 			return false;	
 	}
 
+	@Override
+	public boolean modificarUsuario(Usuario usuario) {
+		if(findById(usuario.getUsername()) != null) {
+			usuarioRepo.save(usuario);
+			return true;
+		}else
+			return false;
+	}
+	
+	
+
 }

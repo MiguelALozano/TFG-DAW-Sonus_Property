@@ -8,4 +8,6 @@ public interface IntUsuarioDao {
 	Usuario findById(String username);
 	//Guardamos un usuario en la BBDD
 	boolean altaUsuario (Usuario usuario);
+	//Modifica el usuario que proporcionamos si existe en la BBDD
+	boolean modificarUsuario(Usuario usuario);
 }

@@ -25,8 +25,9 @@ botonBuscarUsuario.addEventListener('click', function(event){
 			password.value = UsuarioJson.password;
 			enabled.value = UsuarioJson.enabled;
 			//revisar no consigo sacar los perfiles
-			console.log("perfiles " + UsuarioJson.perfiles)
-			for(ele in UsuarioJson.perfiles)
+			//console.log("perfiles " + UsuarioJson.perfiles)
+			//console.log(UsuarioJson.perfiles.descripcion);
+			for(ele of UsuarioJson.perfiles)
 				console.log(ele.descripcion);
 		})
 		.catch(error => {
@@ -34,21 +35,22 @@ botonBuscarUsuario.addEventListener('click', function(event){
 		});
 });
 
-/*
+
 botonModificarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
-	fetch('http://localhost:8080/rest/inmobiliaria/altaUsuario', {
+	fetch('http://localhost:4000/rest/inmobiliaria/modificarUsuario', {
 		method: 'PUT',
 		body: JSON.stringify({
-			username = username.value,
-			nombre = nombre.value,
-			apellido = apellido.value,
-			direccion = direccion.value,
-			email = email.value,	
-			fechaAlta = fechaAlta.value,
-			password = password.value,
-			enabled = enabled.value,
-			perfiles = perfiles.value
+			username : username.value,
+			nombre : nombre.value,
+			apellido : apellido.value,
+			direccion : direccion.value,
+			email : email.value,	
+			fechaAlta : fechaAlta.value,
+			password : password.value,
+			enabled : enabled.value,
+			//revisar perfiles
+			//perfiles : perfiles.value
 			
 		}),
 		headers: {'Content-type': 'application/json'}
@@ -56,4 +58,3 @@ botonModificarUsuario.addEventListener('click', function(event){
 	alert('Usuario modificado');
 });
 
-*/
