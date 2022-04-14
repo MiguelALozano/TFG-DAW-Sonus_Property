@@ -67,4 +67,9 @@ public class HomeController {
 		}
 			
 	}
+	
+	@GetMapping("/modificarUsuario")
+	public String modificarUsuario() {
+		return "modificarUsuario";
+	}
 }
