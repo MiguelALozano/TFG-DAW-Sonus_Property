@@ -19,7 +19,7 @@ public class AdmonController {
 	
 	@GetMapping("/panel")
 	public String panelControl() {
-		return "panel";
+		return "panelAdmon";
 	}
 	
 	@GetMapping("/modificarUsuario")

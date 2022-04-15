@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -20,7 +21,7 @@
 	<header>
         <div id="cabecera" class="cabecera">
             <div class="logo">
-                <img src="images/svg/logo_svg.svg" alt="logo Sonus Property"><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+                <a href="/inicio" class="activa"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
             </div>
         </div>
         <!-- <div class="cabecera">
@@ -46,10 +47,10 @@
                  </div> -->      
                 </div>
             </li>
-            <li><a href="content/about.html">QUIÉNES SOMOS</a></li>
+            <li><a href="../content/about.html">QUIÉNES SOMOS</a></li>
             <li><a href="content/contact.html">CONTACTO</a></li>
             <li><h4><a href="content/contact.html">Inicia Sesión</a></h4></li>
-            <li><h4><a href="content/contact.html">Regístrate</a></h4></li>
+            <li><h4><a href="/altaUsuario">Regístrate</a></h4></li>
             <%-- La parte con su usuario correspondiente --%>
             <li><h4>Bienvenido ${sesion.nombre  }</h4></li>
             <li><h4><a href="content/contact.html">Cerrar Sesión</a></h4></li>
@@ -72,3 +73,21 @@
     -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

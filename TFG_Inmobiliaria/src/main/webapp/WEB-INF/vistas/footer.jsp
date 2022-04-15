@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
 <head><!-- en esta etiqueta añadimos los encabezados de la página, el usuario se abstrae de esto -->
@@ -30,11 +32,11 @@
         </section>
 
         <section class="redes">
-            <a href="https://www.facebook.com/" target="blank"><img src="images/svg/facebook.svg" alt="icono facebook" class="icono-redes"></a>
-            <a href="https://www.twitter.com/" target="blank"><img src="images/svg/twitter.svg" alt="icono twitter" class="icono-redes"></a>
-            <a href="https://www.pinterest.com/" target="blank"><img src="images/svg/pinterest.svg" alt="icono pinterest" class="icono-redes"></a>
-            <a href="https://www.instagram.com/" target="blank"><img src="images/svg/instagram.svg" alt="icono instagram" class="icono-redes"></a>
-            <a href="https://www.youtube.com/" target="blank"><img src="images/svg/youtube.svg" alt="icono youtube" class="icono-redes"></a>
+            <a href="https://www.facebook.com/" target="blank"><img src="../images/svg/facebook.svg" alt="icono facebook" class="icono-redes"></a>
+            <a href="https://www.twitter.com/" target="blank"><img src="../images/svg/twitter.svg" alt="icono twitter" class="icono-redes"></a>
+            <a href="https://www.pinterest.com/" target="blank"><img src="../images/svg/pinterest.svg" alt="icono pinterest" class="icono-redes"></a>
+            <a href="https://www.instagram.com/" target="blank"><img src="../images/svg/instagram.svg" alt="icono instagram" class="icono-redes"></a>
+            <a href="https://www.youtube.com/" target="blank"><img src="../images/svg/youtube.svg" alt="icono youtube" class="icono-redes"></a>
         </section>
     </footer>
 </body>

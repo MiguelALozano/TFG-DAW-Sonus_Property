@@ -9,11 +9,11 @@
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- definición de los textos -->
-    <link rel="icon" type="image/svg+xml" href="images/svg/favicon.svg" sizes="any"> <!-- etiqueta en la que enlazamos el icono que aparecerá en la pesatña del navegador junto al title, llamado favicon-->
+    <link rel="icon" type="image/svg+xml" href="../images/svg/favicon.svg" sizes="any"> <!-- etiqueta en la que enlazamos el icono que aparecerá en la pesatña del navegador junto al title, llamado favicon-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script defer src="js/navbar.js"></script><!-- enlazamos con la librería JavaScript -->
 </head>
@@ -30,7 +30,7 @@
 				
 				<form action="/modificarUsuario" method="post" class="form-alta">
 					<input type="text" id="username" name="username" placeholder="UserName" class="cuadro-form alta" autofocus>
-					<button id="botonBuscarUsuario" class="cuadro-form btm-pq">Buscar</button><br>
+					<button id="botonBuscarUsuario" class="cuadro-form btn-pq">Buscar</button><br>
 					<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="cuadro-form alta"><br>					
 					<input type="text" id="apellido" name="apellido" placeholder="Apellidos" class="cuadro-form alta"><br>
 					<input type="text" id="direccion" name="direccion" placeholder="Dirección" class="cuadro-form alta"><br>
@@ -46,8 +46,8 @@
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
 					
-					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btm-pq">
-					<input type="reset" value="Borrar" class="cuadro-form btm-pq">
+					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btn-pq">
+					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
 				</form>
 				<p>${mensaje}</p>
             </div>  
@@ -58,3 +58,47 @@
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

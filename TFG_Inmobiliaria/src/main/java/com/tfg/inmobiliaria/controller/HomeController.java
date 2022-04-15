@@ -37,6 +37,7 @@ public class HomeController {
 	
 	@GetMapping("/altaUsuario")
 	public String crearUsuario() {
+		System.out.println("Estoy aqui");
 		return "altaUsuario";
 	}
 	
@@ -68,8 +69,4 @@ public class HomeController {
 			
 	}
 	
-	@GetMapping("/modificarUsuario")
-	public String modificarUsuario() {
-		return "modificarUsuario";
-	}
 }

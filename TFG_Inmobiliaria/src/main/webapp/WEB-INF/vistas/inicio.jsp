@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -49,8 +49,8 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    <input class="cuadro-form" type="reset" value="Borrar">
                     <input class="cuadro-form" type="submit" id="submit-btn" value="Buscar">
+                    <input class="cuadro-form" type="reset" value="Borrar">
                 </form>
             </div>  
         </section>
