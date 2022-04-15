@@ -115,6 +115,9 @@ nav{
 a:hover {
     opacity: 0.6;
 }
+.activa{
+	opacity: 0.6;
+}
 
 /* ****************************************** SECTION ****************************************** */
 
@@ -122,7 +125,7 @@ main{
     background-color: var(--color-fondoSeccion);
     
 }
-.main-index{
+.main {
     background-image: url("../images/img-01.jpg");
     width: 100%;
     height: auto; /* You must set a specified height */
@@ -131,6 +134,7 @@ main{
     background-size: cover; /* Resize the background image to cover the entire container */
     background-attachment: fixed;
 }
+
 
 /* ********************* BUSCAR ****************** */
 .seccion-buscar {
@@ -145,7 +149,7 @@ main{
     margin: 1rem .2rem 5rem .2rem;
     border: 0 solid white;
     background-color: var(--color-white);
-    text-align: center;
+    text-align: left;
     color: var(--color-gray);
     box-shadow: 0 0 5px var(--color-gray);
     text-decoration: none;
@@ -156,6 +160,7 @@ main{
 	width: 4.5%;
     padding: 0.5rem;
     margin: 0.5rem;
+    text-align: center;
 }
  
 .admon{
@@ -249,7 +254,7 @@ input[type=text]:focus,
     justify-content: center;
     margin: 4rem;
 }
-
+ 
 .ficha{
     position: absolute;
     width: 100%;
@@ -293,7 +298,126 @@ input[type=text]:focus,
     font-weight: 300;
     font-family: 'Times New Roman', Times, serif;
 }
+ 
+/* ****************************************** QUIENES SOMOS ****************** */
+.about{
+    background-image: url("../images/backgroundAbout.jpg");
+}
 
+/* ****************************************** CONTACTO ****************** */
+.contacto{
+    background-image: url("../images/backgroundContacto.jpg");
+}
+.seccionAbout,
+.seccionContacto {
+    width: 60%;
+    margin: auto;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.contenedorAbout{
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    justify-content:end;
+    text-align: justify;
+    background-color: rgb(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
+.contenedorAbout p{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--color-gray);
+}
+.indent{
+    text-indent: 30px;
+}
+
+.contenedorContacto {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    margin: 1rem auto;
+    justify-content:end;
+    align-items: flex-start;
+    row-gap: 4rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
+.contenedorContacto img{
+    height: 2rem;
+    justify-content: center;
+}
+
+.contenedorContacto p{
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--color-gray);
+}
+.contenedorContacto p span{
+    font-weight: 500;
+}
+
+.redesContacto a{
+    text-decoration: none;
+}
+
+.map{
+    margin: 4rem auto 0rem auto;
+    width: 100%;
+    height:fit-content; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+}
+
+.map img{
+    width: 100%;
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
+.map a{
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .contacto{
+        width: 100%;
+    }
+    
+    .seccionAbout,
+    .seccionContacto {
+    width: 90%;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: var(--color-principal);
+}
+    .contenedorContacto{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        padding: 5% 5%;
+    }  
+    .map{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .contenedorAbout,
+    .contenedorContacto,
+    .map {
+        max-width: 1200px;
+    }
+}
 
 
 /* ****************************************** FOOTER ****************** */

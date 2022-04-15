@@ -21,7 +21,7 @@
 
 	<jsp:include page="cabecera.jsp"></jsp:include>
 	
-	<main class="main-index">
+	<main class="main index">
     <!-- ****************************************** SECTION BUSCAR ****************************************** -->
         <section class="seccion-buscar">
             <div>

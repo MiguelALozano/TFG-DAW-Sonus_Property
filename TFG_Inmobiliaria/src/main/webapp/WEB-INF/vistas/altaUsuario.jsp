@@ -39,7 +39,7 @@
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form"> Añadir perfil de administrador al usuario</label></h3>
 					
-					<input type="submit" value="Dar de Alta" class="cuadro-form btn-pq">
+					<input type="submit" value="Alta" class="cuadro-form btn-pq">
 					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
 				</form>
 				<p>${mensaje}</p>
