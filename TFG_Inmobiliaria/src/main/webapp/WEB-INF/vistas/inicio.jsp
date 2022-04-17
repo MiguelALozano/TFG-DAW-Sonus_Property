@@ -25,6 +25,9 @@
     <!-- ****************************************** SECTION BUSCAR ****************************************** -->
         <section class="seccion-buscar">
             <div>
+            	<h1>${mensajeCerrarSesion }</h1>
+            	<h2>${mensajeDespedida }</h2><br><br>
+            	
                 <h1>Búsqueda de inmuebles</h1>
                 <h2>Encuentre aquí su casa de ensueño</h2>
                 <form>  
@@ -55,7 +58,7 @@
             </div>  
         </section>
 
-        <section class="seccion-fichas">
+         
             <article class="contenedor-fichas">
                 <div class="ficha 1">
                     <div><img src="images/atico01/a01.jpg" alt="Vivienda"></div>

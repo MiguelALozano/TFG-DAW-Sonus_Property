@@ -5,7 +5,7 @@
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
 <head><!-- en esta etiqueta añadimos los encabezados de la página, el usuario se abstrae de esto -->
-    <title>Panel Admon</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
+    <title>Panel Usuario</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,19 +21,16 @@
 
 	<jsp:include page="cabecera.jsp"></jsp:include>
 
-	<h2>PANEL DE CONTROL</h2>
-	<a href="/altaUsuario">Crear Usuario</a>
+	<h2>PANEL DE USUARIO</h2>
+	<a href="/inicio">Ver Inmuebles</a>
 	<br>
 	<a href="/admon/modificarUsuario">Modificar Usuario</a>
-	<p>Crear inmueble</p>
-	<p>Modificar inmueble</p>
-	
+
 	
 		<jsp:include page="footer.jsp"></jsp:include>
 		
 </body>
 </html>
-
 
 
 

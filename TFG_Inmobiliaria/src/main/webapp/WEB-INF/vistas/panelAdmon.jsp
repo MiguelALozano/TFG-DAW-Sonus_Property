@@ -26,17 +26,19 @@
         <section class="seccion-alta">
             <div>
                 <h1>ADMINISTRADOR</h1><br>
-                <h1>Panel de Control</h1>
-                <h2>Selecciona que operación quieres realizar</h2><br>
+                <h1>Panel de Control</h1><br><br>
  
+                <h2>Selecciona que operación quieres realizar con USUARIOS</h2>
                 <div class="botonesAdmon">
                     <a href="/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonEliminarUsuario" class="cuadro-form admon">Eliminar Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver Todos Usuarios</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver Favoritos de Usuario</button></a>
-                </div>
+                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver Favoritos del Usuario</button></a>
+                </div><br><br>
+                
+	            <h2>Selecciona que operación quieres realizar con INMUEBLES</h2>
                 <div class="botonesAdmon">
                     <a href="/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Inmueble</button></a>

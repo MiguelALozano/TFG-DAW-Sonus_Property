@@ -21,6 +21,19 @@
 <body>
 	<article class="contenedor-fichas">
 		<div class="ficha 1">
+			<div><img src="../images/atico01/${inmueble.imagen}" alt="Vivienda ${inmueble.imagen}"></div>
+                    <div><h4>${inmueble.idCiudad}</h4></div>
+                    <div><h3>Título${inmueble.idCiudad}</h3></div>
+                    <div><p>Descripción</p></div>
+                    <div><h4>${inmueble.idTipo}</h4></div>
+                    <div><h5>${inmueble.precio}</h5></div>
+                    <div><h4>${inmueble.estado}Más información</h4></div>
+                    <div><a href="/user/añadirFavorito/${inmueble.idCiudad}">Añadir a Favorito</a></div>
+                </div>
+     </article>     
+           
+	<article class="contenedor-fichas">
+		<div class="ficha 1">
 			<div><img src="images/atico01/a01.jpg" alt="Vivienda"></div>
                     <div><h4>Ciudad 1</h4></div>
                     <div><h3>Título</h3></div>
