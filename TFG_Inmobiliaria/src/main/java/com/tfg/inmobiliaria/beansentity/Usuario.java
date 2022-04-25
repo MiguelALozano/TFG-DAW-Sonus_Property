@@ -36,7 +36,7 @@ public class Usuario implements Serializable {
 	private String password;
 
 	//uni-directional many-to-many association to Perfil
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(
 		name="usuario_perfiles"
 		, joinColumns={

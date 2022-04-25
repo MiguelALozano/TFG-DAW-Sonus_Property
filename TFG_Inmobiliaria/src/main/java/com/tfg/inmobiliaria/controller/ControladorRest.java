@@ -3,6 +3,7 @@ package com.tfg.inmobiliaria.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -33,5 +34,13 @@ public class ControladorRest {
 		return (usuarioRepo.modificarUsuario(usuario))?
 			new ResponseEntity<Usuario>(usuario, HttpStatus.OK):
 			new ResponseEntity<Usuario>(usuario, HttpStatus.NOT_MODIFIED);
+	}
+	
+	@DeleteMapping("/borrarUsuario/{username}")
+	public ResponseEntity<Usuario> procesarBorrarUsuario(@PathVariable ("username") String username){
+		Usuario usuario = usuarioRepo.findById(username);
+		return (usuarioRepo.borrarUsuario(username))?
+			new ResponseEntity<Usuario>(usuario, HttpStatus.OK):
+			new ResponseEntity<Usuario>(usuario, HttpStatus.NOT_FOUND);
 	}
 }

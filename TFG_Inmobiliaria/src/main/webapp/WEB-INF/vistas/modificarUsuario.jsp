@@ -42,14 +42,15 @@
 						<option value="0">Not enabled</option>
 					</select><br>
 					<input type="password" id="password" name="password" placeholder="Nueva Password" class="cuadro-form alta"><br>
-					<input type="password" id="passwordRepetido" name="passwordRepetido" placeholder="Repetir Password" class="cuadro-form alta"><br><br>				
+									
 					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilUser" name="perfilUser" value="true" class="cuadro-form">  Perfil de Usuario </label></h3>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
 					
 					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btn-pq">
-					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
+					<input type="submir" value="Borrar Usuario" id="botonBorrarUsuario" class="cuadro-form btn-pq">
+					<input type="reset" value="Borrar Formulario" class="cuadro-form btn-pq">
 				</form>
 				<p>${mensaje}</p>
             </div>  

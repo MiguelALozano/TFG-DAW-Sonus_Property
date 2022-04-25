@@ -10,4 +10,6 @@ public interface IntUsuarioDao {
 	boolean altaUsuario (Usuario usuario);
 	//Modifica el usuario que proporcionamos si existe en la BBDD
 	boolean modificarUsuario(Usuario usuario);
+	//Borra el usuario de la BBDD
+	boolean borrarUsuario(String username);
 }

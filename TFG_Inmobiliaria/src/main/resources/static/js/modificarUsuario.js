@@ -1,5 +1,7 @@
 let perfilesUser = [];
 
+
+//Buscar Usuario
 botonBuscarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
 	console.log('entro al buscar usuario');
@@ -49,6 +51,7 @@ botonBuscarUsuario.addEventListener('click', function(event){
 });
 
 
+//Modificar Usuario
 botonModificarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
 	//vacio array de perfilesUser
@@ -81,5 +84,23 @@ botonModificarUsuario.addEventListener('click', function(event){
 		headers: {'Content-type': 'application/json'}
 	})
 	alert('Usuario modificado');
+});
+
+//Borrar Usuario
+botonBorrarUsuario.addEventListener('click', function(event){
+	event.preventDefault();
+	fetch(`http://localhost:4000/rest/inmobiliaria/borrarUsuario/${username.value}`, {
+		method:'DELETE',
+		headers: {'Content-type': 'application/json'}
+	})
+	.then(response =>{
+		if(response.status == 200){
+			alert('Usuario Borrado');
+			formModificar.reset();
+		}else {
+			alert('No existe el usuario');
+		}
+		
+	})
 });
 

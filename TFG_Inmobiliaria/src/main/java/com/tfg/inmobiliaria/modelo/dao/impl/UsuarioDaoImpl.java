@@ -37,6 +37,13 @@ public class UsuarioDaoImpl implements IntUsuarioDao{
 			return false;
 	}
 	
-	
+	@Override
+	public boolean borrarUsuario(String username) {
+		if(findById(username) != null) {
+			usuarioRepo.delete(findById(username));
+			return true;
+		}else
+			return false;
+	}
 
 }
