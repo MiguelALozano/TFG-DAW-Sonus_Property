@@ -1,7 +1,9 @@
+let perfilesUser = [];
 
 botonBuscarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
-	console.log('entro al evento');
+	console.log('entro al buscar usuario');
+	
 	fetch(`http://localhost:4000/rest/inmobiliaria/buscarUsuario/${username.value}`, {
 		method:'GET',
 		headers: {'Content-type': 'application/json'}
@@ -9,9 +11,15 @@ botonBuscarUsuario.addEventListener('click', function(event){
 		.then(response =>{
 			if(response.status == 200){
 				alert('El usuario existe');
+				perfilUser.checked = false;
+				perfilAdmon.checked = false;
 				return response.json();
 			}else{
 				alert(`No existe ningún usuario con ese username ${username.value}`)
+				//borro los posibles resultados anteriores que estuvieran en el formulario
+				formModificar.reset();
+				perfilUser.checked = false;
+				perfilAdmon.checked = false;
 				throw new Error(response.status);
 			}	
 		})
@@ -24,11 +32,15 @@ botonBuscarUsuario.addEventListener('click', function(event){
 			fechaAlta.value = UsuarioJson.fechaAlta;
 			password.value = UsuarioJson.password;
 			enabled.value = UsuarioJson.enabled;
-			//revisar no consigo sacar los perfiles
-			//console.log("perfiles " + UsuarioJson.perfiles)
-			//console.log(UsuarioJson.perfiles.descripcion);
-			for(ele of UsuarioJson.perfiles)
+			
+			for(ele of UsuarioJson.perfiles){
 				console.log(ele.descripcion);
+				if (ele.descripcion == 'ROL_USER')
+					perfilUser.checked = true;
+				else if (ele.descripcion == 'ROL_ADMON')
+					perfilAdmon.checked = true;
+			}
+				
 			
 		})
 		.catch(error => {
@@ -39,6 +51,20 @@ botonBuscarUsuario.addEventListener('click', function(event){
 
 botonModificarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
+	//vacio array de perfilesUser
+	perfilesUser = [];
+	//console.log('perfiles al inicio' + perfilesUser);
+	if(perfilUser.checked == true ){
+		console.log('checkbox de usuario esta seleccionado');
+		perfilesUser.push({"idPerfil":1, "descripcion":"ROL_USER"});
+		console.log(perfilesUser);
+	}
+	if(perfilAdmon.checked == true){
+		console.log('checkbox de admon esta seleccionado');
+		perfilesUser.push({"idPerfil":2, "descripcion":"ROL_ADMON"});
+		console.log(perfilesUser);
+	}
+	
 	fetch('http://localhost:4000/rest/inmobiliaria/modificarUsuario', {
 		method: 'PUT',
 		body: JSON.stringify({
@@ -50,9 +76,7 @@ botonModificarUsuario.addEventListener('click', function(event){
 			fechaAlta : fechaAlta.value,
 			password : password.value,
 			enabled : enabled.value,
-			//revisar perfiles
-			//perfiles : perfiles.value
-			
+			perfiles: perfilesUser,
 		}),
 		headers: {'Content-type': 'application/json'}
 	})

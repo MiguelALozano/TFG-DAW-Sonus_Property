@@ -16,6 +16,7 @@
     <link rel="icon" type="image/svg+xml" href="../images/svg/favicon.svg" sizes="any"> <!-- etiqueta en la que enlazamos el icono que aparecerá en la pesatña del navegador junto al title, llamado favicon-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script defer src="js/navbar.js"></script><!-- enlazamos con la librería JavaScript -->
+    <script type="text/javascript" src="/js/modificarUsuario.js" defer></script>
 </head>
 <body>
 	
@@ -28,7 +29,7 @@
                 <h1>Modificar Datos de Usuario</h1>
                 <h2>Rellena los siguientes campos</h2>
 				
-				<form action="/modificarUsuario" method="post" class="form-alta">
+				<form action="/modificarUsuario" method="post" id="formModificar" class="form-alta">
 					<input type="text" id="username" name="username" placeholder="UserName" class="cuadro-form alta" autofocus>
 					<button id="botonBuscarUsuario" class="cuadro-form btn-pq">Buscar</button><br>
 					<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="cuadro-form alta"><br>					
@@ -41,9 +42,10 @@
 						<option value="0">Not enabled</option>
 					</select><br>
 					<input type="password" id="password" name="password" placeholder="Nueva Password" class="cuadro-form alta"><br>
-					<input type="password" id="password" name="password" placeholder="Repetir Password" class="cuadro-form alta"><br><br>				
+					<input type="password" id="passwordRepetido" name="passwordRepetido" placeholder="Repetir Password" class="cuadro-form alta"><br><br>				
 					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
+					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilUser" name="perfilUser" value="true" class="cuadro-form">  Perfil de Usuario </label></h3>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
 					
 					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btn-pq">
