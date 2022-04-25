@@ -30,7 +30,7 @@
  
                 <h2>Selecciona que operación quieres realizar con USUARIOS</h2>
                 <div class="botonesAdmon">
-                    <a href="/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Usuario</button></a>
+                    <a href="/admon/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonEliminarUsuario" class="cuadro-form admon">Eliminar Usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver Usuario</button></a>

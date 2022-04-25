@@ -12,4 +12,10 @@ public interface IntInmuebleDao {
 	Inmueble findById(int id);
 	//Devuelve todos los inmuebles que son novedades
 	List<Inmueble> findNovedades();
+	//Guardamos un inmueble en la BBDD
+	boolean altaInmueble (Inmueble inmueble);
+	//Modifica el inmueble que proporcionamos si existe en la BBDD
+	boolean modificarInmueble(Inmueble inmueble);
+	//Borra el usuario de la BBDD
+	boolean borrarInmueble(int idInmueble);
 }

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tfg.inmobiliaria.beansentity.Inmueble;
 import com.tfg.inmobiliaria.beansentity.Usuario;
+import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
 import com.tfg.inmobiliaria.modelo.dao.IntUsuarioDao;
 
 @RestController
@@ -20,6 +22,11 @@ public class ControladorRest {
 
 	@Autowired
 	private IntUsuarioDao usuarioRepo; 
+	
+	@Autowired
+	private IntInmuebleDao inmuebleRepo;
+	
+	//RESTCONTROLLER PARA USUARIOS
 	
 	@GetMapping("/buscarUsuario/{username}")
 	public ResponseEntity<Usuario> procesarBuscarUsuario(@PathVariable ("username") String username){
@@ -42,5 +49,30 @@ public class ControladorRest {
 		return (usuarioRepo.borrarUsuario(username))?
 			new ResponseEntity<Usuario>(usuario, HttpStatus.OK):
 			new ResponseEntity<Usuario>(usuario, HttpStatus.NOT_FOUND);
+	}
+	
+	//RESTCONTROLLER PARA INMUEBLES
+	
+	@GetMapping("/buscarInmueble/{idInmueble}")
+	public ResponseEntity<Inmueble> procesarBuscarInmueble(@PathVariable ("idInmueble") int idInmueble){
+		Inmueble inmueble = inmuebleRepo.findById(idInmueble);
+		return inmueble != null ?
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.OK):
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.NOT_FOUND);
+	}
+	
+	@PutMapping("/modificarInmueble")
+	public ResponseEntity<Inmueble> procesarModificarInmueble(@RequestBody Inmueble inmueble){
+		return (inmuebleRepo.modificarInmueble(inmueble))?
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.OK):
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.NOT_MODIFIED);
+	}
+	
+	@DeleteMapping("/borrarInmueble/{idInmueble}")
+	public ResponseEntity<Inmueble> procesarBorrarInmueble (@PathVariable ("idInmueble") int idInmueble){
+		Inmueble inmueble = inmuebleRepo.findById(idInmueble);
+		return inmuebleRepo.borrarInmueble(idInmueble)?
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.OK):
+			new ResponseEntity<Inmueble>(inmueble, HttpStatus.NOT_FOUND);
 	}
 }

@@ -28,7 +28,7 @@
                 <h1>Dar de Alta un Usuario</h1>
                 <h2>Rellena los siguientes campos</h2><br><br>
 				<h1>${mensaje}</h1>
-				<form action="/altaUsuario" method="post" class="form-alta">
+				<form action="altaUsuario" method="post" class="form-alta">
 					<input type="text" id="username" name="username" placeholder="UserName" class="cuadro-form alta" autofocus required><br>
 					<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="cuadro-form alta" required><br>
 					<input type="text" id="apellido" name="apellido" placeholder="Apellidos" class="cuadro-form alta" required><br>

@@ -29,4 +29,32 @@ public class InmuebleDaoImpl implements IntInmuebleDao{
 	public List<Inmueble> findNovedades(){
 		return inmuebleRepo.findNovedades();
 	}
+
+	@Override
+	public boolean altaInmueble(Inmueble inmueble) {
+		if(findById(inmueble.getIdInmueble()) == null) {
+			inmuebleRepo.save(inmueble);
+			return true;
+		}else
+			return false;
+	}
+
+	@Override
+	public boolean modificarInmueble(Inmueble inmueble) {
+		if(findById(inmueble.getIdInmueble()) != null) {
+			inmuebleRepo.save(inmueble);
+			return true;
+		}else
+		return false;
+	}
+
+	@Override
+	public boolean borrarInmueble(int idInmueble) {
+		if(findById(idInmueble) != null) {
+			inmuebleRepo.delete(findById(idInmueble));
+			return true;
+		}
+		return false;
+	}
+	
 }
