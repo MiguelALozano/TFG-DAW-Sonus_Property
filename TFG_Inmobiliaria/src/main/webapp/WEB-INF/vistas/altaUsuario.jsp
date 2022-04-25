@@ -35,7 +35,7 @@
 					<input type="text" id="direccion" name="direccion" placeholder="Dirección" class="cuadro-form alta" required><br>
 					<input type="email" id="email" name="email" placeholder="E-mail" class="cuadro-form alta" required><br>
 					<input type="password" id="password" name="password" placeholder="Password" class="cuadro-form alta" required><br>
-					<input type="password" id="password" name="password" placeholder="Repetir Password" class="cuadro-form alta"><br><br>
+					<input type="password" id="password" name="passwordRepetido" placeholder="Repetir Password" class="cuadro-form alta"><br><br>
 					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form"> Añadir perfil de administrador al usuario</label></h3>

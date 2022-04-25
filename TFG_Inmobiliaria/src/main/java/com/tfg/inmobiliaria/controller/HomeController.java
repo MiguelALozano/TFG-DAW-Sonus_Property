@@ -73,7 +73,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/altaUsuario")
-	public String procesarAltaUsuario(Usuario usuario, @RequestParam (required = false) boolean perfilAdmon, Model model ) {
+	public String procesarAltaUsuario(Usuario usuario, @RequestParam (required = false) boolean perfilAdmon, @RequestParam String passwordRepetido, Model model ) {
 		
 		//cuando creo un usuario simpre le doy perfil de usuario
 		List<Perfil> perfiles = new ArrayList<Perfil>();
@@ -83,9 +83,16 @@ public class HomeController {
 		usuario.setFechaAlta(new Date());
 		usuario.setPerfiles(null);
 		usuario.setPerfiles(perfiles);
-		
+		//compruebo que los password coinciden
+		System.out.println("password usuario " + usuario.getPassword());
+		System.out.println("password repetido " + passwordRepetido);
+		if(!(usuario.getPassword().equals(passwordRepetido))) {
+			model.addAttribute("mensaje", "Los password introducidos no coinciden");
+			return "/altaUsuario";
+		}
 		//si se selecciona el checkbox para añadir perfil de administrador le damos
 		//tambien ese perfil al usuario que estamos creando 
+		
 		if(perfilAdmon) {
 			perfiles.add(perfilDao.findById(2));
 			usuario.setPerfiles(perfiles);

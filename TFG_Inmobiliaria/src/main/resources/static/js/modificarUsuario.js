@@ -29,6 +29,7 @@ botonBuscarUsuario.addEventListener('click', function(event){
 			//console.log(UsuarioJson.perfiles.descripcion);
 			for(ele of UsuarioJson.perfiles)
 				console.log(ele.descripcion);
+			
 		})
 		.catch(error => {
 			console.error("Error: ", error.message);
