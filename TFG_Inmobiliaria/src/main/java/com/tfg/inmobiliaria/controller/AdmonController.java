@@ -123,6 +123,12 @@ public class AdmonController {
 			rattr.addFlashAttribute("mensaje", "Ha ocurrido un error. No se ha dado de alta el inmueble");
 			return "redirect:/admon/altaInmueble";
 		}
-		
+	}
+	
+	@GetMapping("/modificarInmueble")
+	public String procesarModificarInmueble(Model model) {
+		model.addAttribute("listaCiudades", ciudadDao.findAll());
+		model.addAttribute("listaTipos", tipoDao.findAll());
+		return "modificarInmueble";
 	}
 }

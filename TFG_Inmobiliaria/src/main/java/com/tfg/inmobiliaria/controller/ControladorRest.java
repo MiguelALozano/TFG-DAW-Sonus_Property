@@ -26,7 +26,7 @@ public class ControladorRest {
 	@Autowired
 	private IntInmuebleDao inmuebleRepo;
 	
-	//RESTCONTROLLER PARA USUARIOS
+	//SERVICIO REST PARA USUARIOS
 	
 	@GetMapping("/buscarUsuario/{username}")
 	public ResponseEntity<Usuario> procesarBuscarUsuario(@PathVariable ("username") String username){
@@ -51,7 +51,7 @@ public class ControladorRest {
 			new ResponseEntity<Usuario>(usuario, HttpStatus.NOT_FOUND);
 	}
 	
-	//RESTCONTROLLER PARA INMUEBLES
+	//SERVICIO REST PARA INMUEBLES
 	
 	@GetMapping("/buscarInmueble/{idInmueble}")
 	public ResponseEntity<Inmueble> procesarBuscarInmueble(@PathVariable ("idInmueble") int idInmueble){
@@ -75,4 +75,6 @@ public class ControladorRest {
 			new ResponseEntity<Inmueble>(inmueble, HttpStatus.OK):
 			new ResponseEntity<Inmueble>(inmueble, HttpStatus.NOT_FOUND);
 	}
+	
+	
 }

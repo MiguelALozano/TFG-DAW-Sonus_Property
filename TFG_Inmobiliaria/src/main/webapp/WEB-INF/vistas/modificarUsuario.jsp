@@ -49,7 +49,7 @@
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
 					
 					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btn-pq">
-					<input type="submir" value="Borrar Usuario" id="botonBorrarUsuario" class="cuadro-form btn-pq">
+					<input type="submit" value="Borrar Usuario" id="botonBorrarUsuario" class="cuadro-form btn-pq">
 					<input type="reset" value="Borrar Formulario" class="cuadro-form btn-pq">
 				</form>
 				<p>${mensaje}</p>
