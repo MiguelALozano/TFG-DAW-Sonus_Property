@@ -50,7 +50,7 @@ public class Inmueble implements Serializable {
 	//uni-directional many-to-one association to Ciudad
 	@ManyToOne
 	@JoinColumn(name="ID_CIUDAD")
-	private Ciudad ciudade;
+	private Ciudad ciudad;
 
 	//uni-directional many-to-one association to Tipo
 	@ManyToOne
@@ -63,7 +63,7 @@ public class Inmueble implements Serializable {
 
 	public Inmueble(int idInmueble, byte ascensor, int baños, String estado, Date fechaAlta, String imagen,
 			byte novedad, int numHabitaciones, String planta, BigDecimal precio, int tamanio, byte terraza,
-			Ciudad ciudade, Tipo tipo) {
+			Ciudad ciudad, Tipo tipo) {
 		super();
 		this.idInmueble = idInmueble;
 		this.ascensor = ascensor;
@@ -77,7 +77,7 @@ public class Inmueble implements Serializable {
 		this.precio = precio;
 		this.tamanio = tamanio;
 		this.terraza = terraza;
-		this.ciudade = ciudade;
+		this.ciudad = ciudad;
 		this.tipo = tipo;
 	}
 
@@ -178,12 +178,12 @@ public class Inmueble implements Serializable {
 		this.terraza = terraza;
 	}
 
-	public Ciudad getCiudade() {
-		return this.ciudade;
+	public Ciudad getCiudad() {
+		return this.ciudad;
 	}
 
-	public void setCiudade(Ciudad ciudade) {
-		this.ciudade = ciudade;
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
 	}
 
 	public Tipo getTipo() {
@@ -223,7 +223,7 @@ public class Inmueble implements Serializable {
 		return "Inmueble [idInmueble=" + idInmueble + ", ascensor=" + ascensor + ", baños=" + baños + ", estado="
 				+ estado + ", fechaAlta=" + fechaAlta + ", imagen=" + imagen + ", novedad=" + novedad
 				+ ", numHabitaciones=" + numHabitaciones + ", planta=" + planta + ", precio=" + precio + ", tamanio="
-				+ tamanio + ", terraza=" + terraza + ", ciudade=" + ciudade + ", tipo=" + tipo + "]";
+				+ tamanio + ", terraza=" + terraza + ", ciudad=" + ciudad + ", tipo=" + tipo + "]";
 	}
 
 }

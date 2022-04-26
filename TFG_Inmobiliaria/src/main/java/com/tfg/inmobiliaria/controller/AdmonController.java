@@ -13,10 +13,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.tfg.inmobiliaria.beansentity.Ciudad;
+import com.tfg.inmobiliaria.beansentity.Inmueble;
 import com.tfg.inmobiliaria.beansentity.Perfil;
+import com.tfg.inmobiliaria.beansentity.Tipo;
 import com.tfg.inmobiliaria.beansentity.Usuario;
+import com.tfg.inmobiliaria.modelo.dao.IntCiudadDao;
+import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
 import com.tfg.inmobiliaria.modelo.dao.IntPerfilDao;
+import com.tfg.inmobiliaria.modelo.dao.IntTipoDao;
 import com.tfg.inmobiliaria.modelo.dao.IntUsuarioDao;
 
 
@@ -29,10 +36,15 @@ public class AdmonController {
 	
 	@Autowired
 	private IntUsuarioDao usuarioDao;
-	//modificar usuario
 	
-	//crear inmueble
-	//modificar inmueble
+	@Autowired
+	private IntCiudadDao ciudadDao;
+	
+	@Autowired
+	private IntTipoDao tipoDao;
+	
+	@Autowired
+	private IntInmuebleDao inmuebleDao;
 	
 	@GetMapping("/panel")
 	public String panelControl() {
@@ -60,7 +72,7 @@ public class AdmonController {
 		System.out.println("Perfiles " + perfiles);
 		usuario.setEnabled(1);
 		usuario.setFechaAlta(new Date());
-		usuario.setPerfiles(null);
+		//usuario.setPerfiles(null);
 		usuario.setPerfiles(perfiles);
 		//compruebo que los password coinciden
 		System.out.println("password usuario " + usuario.getPassword());
@@ -83,5 +95,34 @@ public class AdmonController {
 			model.addAttribute("mensaje", "Ya existe un usuario con ese Username");
 			return "/altaUsuario";
 		}
-	}	
+	}
+	
+	@GetMapping("/altaInmueble")
+	public String procesarAltaInmueble(Model model) {
+		model.addAttribute("listaCiudades", ciudadDao.findAll());
+		System.out.println(ciudadDao.findAll());
+		model.addAttribute("listaTipos", tipoDao.findAll());
+		return "altaInmueble";
+	}
+	
+	@PostMapping("/altaInmueble")
+	public String procesarAltaInmueble(Inmueble inmueble, @RequestParam ("idCiudad") int idCiudad, @RequestParam ("idTipo") int idTipo ,RedirectAttributes rattr) {
+		//creo un objeto ciudad con el idCiudad recogido del formulario y lo asigno al inmueble;
+		Ciudad ciudad = ciudadDao.findById(idCiudad);
+		inmueble.setCiudad(ciudad);
+		//creo un objeto tipo con el idTipo recogido del formulario y lo asigno al inmueble;
+		Tipo tipo = tipoDao.findById(idTipo);
+		inmueble.setTipo(tipo);
+		inmueble.setFechaAlta(new Date());
+		//falta la imagen
+		System.out.println(inmueble);
+		if (inmuebleDao.altaInmueble(inmueble)) {
+			rattr.addFlashAttribute("mensaje", "Inmueble dado de alta");
+			return "redirect:/admon/altaInmueble";
+		}else {
+			rattr.addFlashAttribute("mensaje", "Ha ocurrido un error. No se ha dado de alta el inmueble");
+			return "redirect:/admon/altaInmueble";
+		}
+		
+	}
 }

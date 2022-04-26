@@ -40,7 +40,7 @@
                 
 	            <h2>Selecciona que operación quieres realizar con INMUEBLES</h2>
                 <div class="botonesAdmon">
-                    <a href="/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Inmueble</button></a>
+                    <a href="/admon/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonEliminarUsuario" class="cuadro-form admon">Eliminar Inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver Inmueble</button></a>

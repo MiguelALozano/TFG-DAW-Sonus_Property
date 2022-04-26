@@ -18,4 +18,5 @@ public interface IntInmuebleDao {
 	boolean modificarInmueble(Inmueble inmueble);
 	//Borra el usuario de la BBDD
 	boolean borrarInmueble(int idInmueble);
+	
 }
