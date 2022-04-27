@@ -40,7 +40,7 @@
 
 					<p>¿Raúl que te parece esta opción?</p>
 					<select name="idCiudad" id="ciudad" class="cuadro-form">
-						<option value="">Ciudad</option>
+						<option>Ciudad</option>
 						<c:forEach var="ele" items="${listaCiudades}">
 							<option value="${ele.idCiudad}">${ele.nombre}</option>
 						</c:forEach>
