@@ -27,7 +27,7 @@ import com.tfg.inmobiliaria.modelo.dao.IntTipoDao;
 import com.tfg.inmobiliaria.modelo.dao.IntUsuarioDao;
 
 
-@Controller
+@Controller 
 @RequestMapping("/admon")
 public class AdmonController {
 	

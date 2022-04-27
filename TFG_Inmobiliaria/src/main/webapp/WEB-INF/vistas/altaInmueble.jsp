@@ -29,41 +29,60 @@
                 <h2>Rellena los siguientes campos</h2><br><br>
 				<h1>${mensaje}</h1>
 				<form action="altaInmueble" method="post" class="form-alta">
-					<label for="ciudad">Ciudad</label>
-					<select name="idCiudad" id="ciudad">
+					<label for="ciudad">Ciudad</label><br>
+						<select name="idCiudad" id="ciudad" class="cuadro-form">
+							<c:forEach var="ele" items="${listaCiudades}">
+								<option value="${ele.idCiudad}">${ele.nombre}</option>
+							</c:forEach>
+						</select>
+						<br>
+
+
+					<p>¿Raúl que te parece esta opción?</p>
+					<select name="idCiudad" id="ciudad" class="cuadro-form">
+						<option value="">Ciudad</option>
 						<c:forEach var="ele" items="${listaCiudades}">
 							<option value="${ele.idCiudad}">${ele.nombre}</option>
 						</c:forEach>
 					</select>
+
 					
 					<div>Ascensor</div>
-						<input type="checkbox" id="ascensorSi" name="ascensor" value="1" checked>
+						<input type="checkbox" id="ascensorSi" name="ascensor" value="1" checked  class="cuadro-form">
 						<label for="ascensorSi">Si</label>
-						<input type="checkbox" id="ascensorNo" name="ascensor" value="0">
+						<input type="checkbox" id="ascensorNo" name="ascensor" value="0"  class="cuadro-form">
 						<label for="ascensorNo">No</label>
 					<br>
-					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" autofocus required><br>
+					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" required><br>
 					<input type="text" id="estado" name="estado" placeholder="Estado del inmueble" class="cuadro-form alta" required><br>
 					<!--  mirar como meter la imagen, FALTA ESTA PARTE -->
 					<label for="novedad">Novedad</label>
-						<select id ="novedad" name="novedad">
+						<select id ="novedad" name="novedad" class="cuadro-form">
+							<option value="1">Si</option>
+							<option value="0">No</option>
+						</select>
+						<br>
+
+						<p>¿Raúl que te parece esta opción?</p>
+						<select id ="novedad" name="novedad" class="cuadro-form">
+							<option value="">Novedad</option>
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
 					<br>
-					<input type="number" id="numHabitaciones" name="numHabitaciones" placeholder="número de habitaciones" class="cuadro-form alta" autofocus required><br>
+					<input type="number" id="numHabitaciones" name="numHabitaciones" placeholder="Número de habitaciones" class="cuadro-form alta" required><br>
 					<input type="text" id="planta" name="planta" placeholder="Planta" class="cuadro-form alta" required><br>
-					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" autofocus required><br>
-					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" autofocus required><br>
+					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" required><br>
+					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
 					<label for="terraza">Terraza</label>
-						<select name="terraza" id="terraza">
+						<select name="terraza" id="terraza" class="cuadro-form">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
 					
 					<br>
-					<label for="tipoInmueble">Tipo de Inmueble</label>
-						<select name="idTipo" id="tipoInmueble">
+					<label for="tipoInmueble">Tipo de Inmueble</label><br>
+						<select name="idTipo" id="tipoInmueble" class="cuadro-form">
 							<c:forEach var="ele" items="${listaTipos}">
 								<option value="${ele.idTipo}">${ele.tipo}</option>
 							</c:forEach>
