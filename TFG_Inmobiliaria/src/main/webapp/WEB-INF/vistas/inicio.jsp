@@ -33,17 +33,15 @@
                 <form>  
                     <select id="ciudad" name="ciudad" class="cuadro-form">
                         <option value="">Ciudad</option>
-                        <option value="malaga">Malaga</option>
-                        <option value="marid">Madrid</option>
-                        <option value="barcelona">Barcelona</option>
-                        <option value="cantabria">Cantabria</option>
+                        <c:forEach var="ele" items="${listaCiudades}">
+								<option value="${ele.idCiudad}">${ele.nombre}</option>
+						</c:forEach>
                     </select>
                     <select id="tipo" name="tipo" class="cuadro-form">
                         <option value="">Tipo de inmueble</option>
-                        <option value="apto">Apartamento</option>
-                        <option value="chalet">Chalet</option>
-                        <option value="campo">Casa de campo</option>
-                        <option value="atico">Ático</option>
+                        <c:forEach var="ele" items="${listaTipos}">
+								<option value="${ele.idTipo}">${ele.tipo}</option>
+						</c:forEach>
                     </select>
                     <select id="room" name="room" class="cuadro-form">
                         <option value="">Habitaciones</option>
@@ -57,76 +55,20 @@
                 </form>
             </div>  
         </section>
-
-         
-            <article class="contenedor-fichas">
-                <div class="ficha 1">
-                    <div><img src="images/atico01/a01.jpg" alt="Vivienda"></div>
-                    <div><h4>Ciudad 1</h4></div>
-                    <div><h3>Título</h3></div>
-                    <div><p>Descripción</p></div>
-                    <div><h4>Tipo</h4></div>
-                    <div><h5>Precio</h5></div>
-                    <div><h4>Más información</h4></div>
-                </div>
-            </article>
-            <article class="contenedor-fichas">
-                <div class="ficha 2"> 
-                    <img src="images/atico01/a02.jpg" alt="Vivienda">
-                    <h4>Ciudad 2</h4>
-                    <h3>Título</h3>
-                    <p>Descripción</p>
-                    <h4>Tipo</h4>
-                    <h5>Precio</h5>
-                    <h4>Más información</h4>
-                </div>
-            </article>
-            <article class="contenedor-fichas">
-                <div class="ficha 3"> 
-                    <img src="images/atico01/a03.jpg" alt="Vivienda">
-                    <h4>Ciudad 3</h4>
-                    <h3>Título</h3>
-                    <p>Descripción</p>
-                    <h4>Tipo</h4>
-                    <h5>Precio</h5>
-                    <h4>Más información</h4>
-                </div>
-            </article>
-            <article class="contenedor-fichas">
-                <div class="ficha 1"> 
-                    <img src="images/atico01/a02.jpg" alt="Vivienda">
-                    <h4>Ciudad 1</h4>
-                    <h3>Título</h3>
-                    <p>Descripción</p>
-                    <h4>Tipo</h4>
-                    <h5>Precio</h5>
-                    <h4>Más información</h4>
-                </div>
-            </article>
-            <article class="contenedor-fichas">
-                <div class="ficha 2"> 
-                    <img src="images/atico01/a03.jpg" alt="Vivienda">
-                    <h4>Ciudad 2</h4>
-                    <h3>Título</h3>
-                    <p>Descripción</p>
-                    <h4>Tipo</h4>
-                    <h5>Precio</h5>
-                    <h4>Más información</h4>
-                </div>
-            </article>
-            <article class="contenedor-fichas">
-                <div class="ficha 3"> 
-                    <img src="images/atico01/a01.jpg" alt="Vivienda">
-                    <h4>Ciudad 3</h4>
-                    <h3>Título</h3>
-                    <p>Descripción</p>
-                    <h4>Tipo</h4>
-                    <h5>Precio</h5>
-                    <h4>Más información</h4>
-                </div>
-            </article>
-            <jsp:include page="ficha.jsp"></jsp:include>
-        </section>
+		<section>
+			<c:forEach var="ele" items="${listaNovedades}">        
+	            <article class="contenedor-fichas">
+	                <div class="ficha 1">
+	                    <div><img src="images/atico01/a01.jpg" alt="Vivienda"></div>
+	                    <div><h4>${ele.ciudad.nombre}</h4></div>
+	                    <div><h3>${ele.tipo.tipo}</h3></div>
+	                    <div><h4>${ele.tamanio}</h4></div>
+	                    <div><h5>${ele.precio}</h5></div>
+	                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
+	                </div>
+	            </article>
+            </c:forEach> 
+            </section>
     </main>
 
 	<jsp:include page="footer.jsp"></jsp:include>
