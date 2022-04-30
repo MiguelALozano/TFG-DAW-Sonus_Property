@@ -46,7 +46,7 @@ public class AdmonController {
 	@Autowired
 	private IntInmuebleDao inmuebleDao;
 	
-	@GetMapping("/panel")
+	@GetMapping("/panelAdmon")
 	public String panelControl() {
 		return "panelAdmon";
 	}
@@ -59,7 +59,6 @@ public class AdmonController {
 	
 	@GetMapping("/altaUsuario")
 	public String crearUsuario() {
-		System.out.println("Estoy aqui");
 		return "altaUsuario";
 	}
 	

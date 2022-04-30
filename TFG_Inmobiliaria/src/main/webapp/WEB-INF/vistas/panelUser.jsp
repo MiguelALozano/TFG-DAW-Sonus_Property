@@ -30,12 +30,16 @@
                 <h2>Selecciona que operación quieres realizar</h2><br>
  
                 <div class="botonesAdmon">
-                    <a href="/inicio"><button class="cuadro-form admon">Ver Inmuebles</button></a>
-                    <a href="/user/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonEliminarUsuario" class="cuadro-form admon">Dar de baja</button></a>
+                    <a href="/inicio"><button class="cuadro-form admon">Ver inmuebles</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver favoritos</button></a>
+                </div>
+                <div class="botonesAdmon">
                     <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver mis datos</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver Favoritos</button></a>
-                    <a href="/logout"><button id="botonCerrarSesion" class="cuadro-form admon">Cerrar Sesión</button></a>
+                    <a href="/user/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar mis datos</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonEliminarUsuario" class="cuadro-form admon">Darme de baja</button></a>
+                </div>
+                <div class="botonesAdmon">
+                    <a href="/logout"><button id="botonCerrarSesion" class="cuadro-form admon">Cerrar sesión</button></a>
                 </div>
             </div> 
         </section>

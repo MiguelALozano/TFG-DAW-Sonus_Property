@@ -21,7 +21,7 @@
 	<header>
         <div id="cabecera" class="cabecera">
             <div class="logo">
-                <a href="/inicio" class="activa"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+                <a href="/inicio"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
             </div>
         </div>
         <!-- <div class="cabecera">
@@ -36,6 +36,8 @@
     <!-- ****************************************** NAV ****************************************** -->
     <nav>
         <ul class="menu">
+        	<li><a href="/inicio"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+        	</li>
             <li><a href="/inicio" class="activa">INICIO</a></li>
             <li>
                 <div class="desplegable">INMUEBLES <!-- creamos un desplegable, desde el cual podemos acceder a las páginas Venta y Alquiler -->

@@ -35,7 +35,7 @@
 						<input type="submit" value="Acceder" class="cuadro-form btn-pq">
 						<input type="reset" value="Borrar" class="cuadro-form btn-pq"><br><br>
 						
-						<a href="/admon/panel"><button type="button" class="cuadro-form alta">Acceder como Administrador</button></a>
+						<a href="/admon/panelAdmon"><button type="button" class="cuadro-form alta">Acceder como Administrador</button></a>
 						
 				</form><br><br>
 				<h3>¿Aún no eres cliente nuestro?</h3><br>

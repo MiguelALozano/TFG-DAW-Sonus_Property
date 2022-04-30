@@ -27,7 +27,7 @@
         <section class="seccion-alta">
             <div>
                 <h1>Datos de Usuario</h1>
-                <h2>Rellena los siguientes campos</h2>
+                <h2>Busca el usuario registrado</h2>
 				
 				<form action="/modificarUsuario" method="post" id="formModificar" class="form-alta">
 					<input type="text" id="username" name="username" placeholder="UserName" class="cuadro-form alta" autofocus>
@@ -43,14 +43,13 @@
 					</select><br>
 					<input type="password" id="password" name="password" placeholder="Nueva Password" class="cuadro-form alta"><br>
 									
-					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilUser" name="perfilUser" value="true" class="cuadro-form">  Perfil de Usuario </label></h3>
 					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
 					
-					<input type="submit" value="Modificar" id="botonModificarUsuario" class="cuadro-form btn-pq">
-					<input type="submit" value="Borrar Usuario" id="botonBorrarUsuario" class="cuadro-form btn-pq">
-					<input type="reset" value="Borrar Formulario" class="cuadro-form btn-pq">
+					<input type="submit" value="Modificar Usuario" id="botonModificarUsuario" class="cuadro-form">
+					<input type="submit" value="Eliminar Usuario" id="botonBorrarUsuario" class="cuadro-form">
+					<input type="reset" value="Borrar Formulario" class="cuadro-form">
 				</form>
 				<p>${mensaje}</p>
             </div>  

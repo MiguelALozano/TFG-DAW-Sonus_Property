@@ -26,25 +26,23 @@
         <section class="seccion-alta">
             <div>
                 <h1>ADMINISTRADOR</h1><br>
-                <h1>Panel de Control</h1><br><br>
+                <h1>Bienvenido ${usuario.nombre }</h1>
  
                 <h2>Selecciona que operación quieres realizar con USUARIOS</h2>
                 <div class="botonesAdmon">
-                    <a href="/admon/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonEliminarUsuario" class="cuadro-form admon">Eliminar Usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver Usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver Todos Usuarios</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver Favoritos del Usuario</button></a>
+                    <a href="/admon/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear usuario</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar/Eliminar usuario</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver usuario</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los usuarios</button></a>
+                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver favoritos del usuario</button></a>
                 </div><br><br>
                 
 	            <h2>Selecciona que operación quieres realizar con INMUEBLES</h2>
                 <div class="botonesAdmon">
-                    <a href="/admon/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear Inmueble</button></a>
-                    <a href="/admon/modificarInmueble"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar Inmueble</button></a>
-                    <a href="/admon/modificarInmueble"><button id="botonEliminarUsuario" class="cuadro-form admon">Eliminar Inmueble</button></a>
-                    <a href="/admon/modificarInmueble"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver Inmueble</button></a>
-                    <a href="/admon/modificarInmueble"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver Todos Inmueble</button></a>
+                    <a href="/admon/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear inmueble</button></a>
+                    <a href="/admon/modificarInmueble"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar/Eliminar inmueble</button></a>
+                    <a href="/admon/modificarInmueble"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver inmueble</button></a>
+                    <a href="/admon/modificarInmueble"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los inmuebles</button></a>
                 </div>
             </div> 
         </section>
