@@ -56,5 +56,20 @@ public class InmuebleDaoImpl implements IntInmuebleDao{
 		}
 		return false;
 	}
+
+	@Override
+	public List<Inmueble> findByCiudadNombreAndTipoTipo(String nombre, String tipo) {
+		return inmuebleRepo.findByCiudadNombreAndTipoTipo(nombre, tipo);
+	}
+
+	@Override
+	public List<Inmueble> findByCiudadNombre(String nombre) {
+		return inmuebleRepo.findByCiudadNombre(nombre);
+	}
+
+	@Override
+	public List<Inmueble> findByTipoTipo(String tipo) {
+		return inmuebleRepo.findByTipoTipo(tipo);
+	}
 	
 }

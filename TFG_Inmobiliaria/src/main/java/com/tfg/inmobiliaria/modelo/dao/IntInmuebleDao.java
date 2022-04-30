@@ -18,5 +18,10 @@ public interface IntInmuebleDao {
 	boolean modificarInmueble(Inmueble inmueble);
 	//Borra el usuario de la BBDD
 	boolean borrarInmueble(int idInmueble);
-	
+	//Devuelve una lista de inmuebles de la ciudad y el tipo indicados
+	List<Inmueble> findByCiudadNombreAndTipoTipo(String nombre, String tipo);
+	//Devuelve una lista de inmuebles de la ciudad indicada
+	public List<Inmueble> findByCiudadNombre(String nombre);
+	//Devuelve una lista de inmuebles del tipo indicado
+	public List<Inmueble> findByTipoTipo(String tipo);
 }

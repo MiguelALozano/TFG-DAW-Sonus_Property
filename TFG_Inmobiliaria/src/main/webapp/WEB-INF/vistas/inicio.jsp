@@ -30,28 +30,21 @@
             	
                 <h1>Búsqueda de inmuebles</h1>
                 <h2>Encuentre aquí su casa de ensueño</h2>
-                <form>  
+                <p>${mensaje}</p>
+                <form method="post" action="/inmueble/buscarInmuebles">  
                     <select id="ciudad" name="ciudad" class="cuadro-form">
                         <option value="">Ciudad</option>
                         <c:forEach var="ele" items="${listaCiudades}">
-								<option value="${ele.idCiudad}">${ele.nombre}</option>
+								<option value="${ele.nombre}">${ele.nombre}</option>
 						</c:forEach>
                     </select>
                     <select id="tipo" name="tipo" class="cuadro-form">
                         <option value="">Tipo de inmueble</option>
                         <c:forEach var="ele" items="${listaTipos}">
-								<option value="${ele.idTipo}">${ele.tipo}</option>
+								<option value="${ele.tipo}">${ele.tipo}</option>
 						</c:forEach>
                     </select>
-                    <select id="room" name="room" class="cuadro-form">
-                        <option value="">Habitaciones</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
                     <input class="cuadro-form" type="submit" id="submit-btn" value="Buscar">
-                    <input class="cuadro-form" type="reset" value="Borrar">
                 </form>
             </div>  
         </section>
@@ -68,7 +61,7 @@
 	                </div>
 	            </article>
             </c:forEach> 
-            </section>
+        </section>
     </main>
 
 	<jsp:include page="footer.jsp"></jsp:include>
