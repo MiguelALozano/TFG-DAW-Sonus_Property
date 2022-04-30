@@ -13,8 +13,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import com.tfg.inmobiliaria.beansentity.Usuario;
+import com.tfg.inmobiliaria.modelo.dao.IntCiudadDao;
 import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
-
+import com.tfg.inmobiliaria.modelo.dao.IntTipoDao;
 import com.tfg.inmobiliaria.modelo.dao.IntUsuarioDao;
 
 
@@ -27,9 +28,17 @@ public class HomeController {
 	@Autowired
 	private IntUsuarioDao usuarioDao;
 	
+	@Autowired
+	private IntCiudadDao ciudadDao;
+	
+	@Autowired
+	private IntTipoDao tipoDao;
+	
 	@GetMapping("/inicio")
 	public String inicio(Model model) {
-		model.addAttribute("novedades", inmuebleDao.findNovedades());
+		model.addAttribute("listaNovedades", inmuebleDao.findNovedades());
+		model.addAttribute("listaCiudades", ciudadDao.findAll());
+		model.addAttribute("listaTipos", tipoDao.findAll());
 		return "inicio";
 	}
 	
