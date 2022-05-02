@@ -48,19 +48,25 @@
                 </form>
             </div>  
         </section>
-		<section>
-			<c:forEach var="ele" items="${listaNovedades}">        
-	            <article class="contenedor-fichas">
-	                <div class="ficha 1">
-	                    <div><img src="images/atico01/a01.jpg" alt="Vivienda"></div>
-	                    <div><h4>${ele.ciudad.nombre}</h4></div>
-	                    <div><h3>${ele.tipo.tipo}</h3></div>
-	                    <div><h4>${ele.tamanio}</h4></div>
-	                    <div><h5>${ele.precio}</h5></div>
-	                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
-	                </div>
-	            </article>
-            </c:forEach> 
+    <!-- ****************************************** SECTION NOVEDADES ****************************************** -->    
+		<section class="seccion-fichas">
+			<div>
+				<h1>Últimas novedades</h1>
+			</div>
+			<div class="seccion-fichas2">
+				<c:forEach var="ele" items="${listaNovedades}">        
+		            <article class="contenedor-fichas">
+		                <div class="ficha">
+		                    <div><a href="/inmueble/verInmueble/${ele.idInmueble}"><img src="images/inmuebles/${ele.imagen}" alt="Vivienda"></a></div>
+		                    <div><h4>${ele.ciudad.nombre}</h4></div>
+		                    <div><h3>${ele.tipo.tipo}</h3></div>
+		                    <div><h4>${ele.tamanio} m2</h4></div>
+		                    <div><h5>${ele.precio} &euro;</h5></div>
+		                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
+		                </div>
+		            </article>
+	            </c:forEach> 
+			</div>
         </section>
     </main>
 

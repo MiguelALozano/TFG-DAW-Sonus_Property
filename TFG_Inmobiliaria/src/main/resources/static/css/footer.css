@@ -1,0 +1,91 @@
+@charset "ISO-8859-1";
+
+:root {
+    --color-principal: rgb(0, 0, 0);
+    --color-gold: rgb(196, 158, 92);
+    --color-white: rgb(255, 255, 255);
+    --color-gray: rgb(118, 116, 116);
+    --color-fondoSeccion: rgb(197, 194, 178);
+    --color-orange: rgb(255, 115, 0);
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ****************************************** FOOTER ****************** */
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-principal);
+    text-align: center;
+    color: var(--color-gold);
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: "copyright cookies redes";
+    justify-items: center;
+    align-items: center;
+}
+
+.copyright{
+    grid-area: copyright;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.cookies{
+    grid-area: cookies;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.cookies ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cookies a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: var(--color-gold);
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.redes a{
+    display: grid;
+    margin-right: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+.redes img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.redes a:hover, .redesContacto a:hover, .cookies a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+    footer{
+        grid-template-areas: "redes"
+                            "cookies"
+                            "copyright";
+    }
+}

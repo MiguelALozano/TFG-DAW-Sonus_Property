@@ -56,6 +56,11 @@
 					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" required><br>
 					<input type="text" id="estado" name="estado" placeholder="Estado del inmueble" class="cuadro-form alta" required><br>
 					<!--  mirar como meter la imagen, FALTA ESTA PARTE -->
+					<input type="text" id="imagen" name="imagen" placeholder="Nombre de la imagen" class="cuadro-form alta" required><br>
+					
+					
+					
+					
 					<label for="novedad">Novedad</label>
 						<select id ="novedad" name="novedad" class="cuadro-form">
 							<option value="1">Si</option>

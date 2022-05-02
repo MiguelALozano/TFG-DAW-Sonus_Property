@@ -51,75 +51,6 @@ h3{
     text-align: center;
     color: var(--color-principal);
 }
-/* ****************************************** HEADER ****************************************** */
-header {
-    width: 100%;
-    margin: 0 auto;
-    background-color: var(--color-principal);
-}
-
-.cabecera{
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-}
-.logo{
-    width: 20%;
-    margin: auto;
-}
-@media screen and (max-width: 600px) {
-    .cabecera{
-        grid-template-columns: 1fr;
-    }
-    .logo{
-        width: 35%;
-    }
-}
-@media screen and (min-width: 1200px) {
-    .cabecera{
-        width: 1200px;
-        margin: 0 auto;
-    }
-}
-
-/* ****************************************** NAV ****************************************** */
-nav{
-    width: 100%;
-    margin: 0 auto;
-}
-.menu{
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0.8rem;
-}
-
-
-.menu li a, .desplegable {
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: center;
-    color: var(--color-gold);
-}
-.menu li h4,
-.menu li h4 a {
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-decoration: none;
-    text-align: center;
-    color: var(--color-gold);
-}
-a:hover {
-    opacity: 0.6;
-}
-.activa{
-	opacity: 0.6;
-}
 
 /* ****************************************** SECTION ****************************************** */
 
@@ -128,12 +59,12 @@ main{
     
 }
 .main {
-    background-image: url("../images/img-01.jpg");
+    background-image: url("../images/backgroundInicio.jpg");
     width: 100%;
-    height: auto; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -167,6 +98,84 @@ main{
  
 .admon{
     margin: 0.5rem;
+}
+
+/* ********************* FICHAS ****************** */
+.seccion-fichas {
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-fondoSeccion);
+}
+
+.seccion-fichas2 {
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor-fichas {
+    position: relative;
+    margin: 1rem;
+    width: 15rem;
+    height: 24rem;
+    margin: 1rem auto;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-white);
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
+ 
+.ficha{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--color-gray);
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    row-gap: 1.2rem;
+    align-content: space-around;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ficha img{
+    width: 100%;
+}
+.seccion-fichas h1{
+	padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--color-principal);
+}
+.ficha h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-principal);
+}
+.ficha h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.ficha h5{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-gold);
+}
+
+.ficha a{
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: var(--color-gray);
+    text-decoration: none;
 }
 
 /* ********************* PANEL DE CONTROL ****************** */
@@ -235,75 +244,29 @@ input[type=text]:focus,
     background-color: var(--color-fondoSeccion);
 }
  
-/* ********************* FICHAS ****************** */
-.seccion-fichas {
-    margin: 5rem auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--color-fondoSeccion);
-}
- 
-.contenedor-fichas{
-    position: relative;
-    width: 15rem;
-    height: 25rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 4rem;
-}
- 
-.ficha{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 5px var(--color-gray);
-    background-color: var(--color-white);
-    text-align: center;
-    color: var(--color-gray);
-    overflow: hidden;
 
-
-    display: flex;
-    flex-direction:column;
-    flex-wrap: nowrap;
-    row-gap: 1.2rem;
-    align-content: space-around;
-}
-.ficha img{
-    width: 100%;
-}
-.ficha h3{
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--color-principal);
-}
-.ficha h4{
-    font-size: 0.7rem;
-    font-weight: 300;
-}
-.ficha h5{
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: var(--color-gold);
-}
-.ficha p{
-    font-size: 0.6rem;
-    font-weight: 300;
-}
-.ficha p{
-    font-size: 0.6rem;
-    font-weight: 300;
-    font-family: 'Times New Roman', Times, serif;
-}
  
 /* ****************************************** QUIENES SOMOS ****************** */
 .about{
     background-image: url("../images/backgroundAbout.jpg");
+}
+
+.contenedorAbout{
+    padding: 1.5rem 1.5rem;
+    margin: 1rem auto;
+    justify-content:end;
+    background-color: rgb(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
+
+.contenedorAbout p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--color-gray);
+}
+.indent{
+    text-indent: 30px;
 }
 
 /* ****************************************** CONTACTO ****************** */
@@ -312,29 +275,12 @@ input[type=text]:focus,
 }
 .seccionAbout,
 .seccionContacto {
-    width: 60%;
+    width: 50%;
     margin: auto;
     padding-top: 8rem;
     padding-bottom: 5rem;
     text-align: center;
     color: var(--color-principal);
-}
-
-.contenedorAbout{
-    padding: 1rem 1rem;
-    margin: 1rem auto;
-    justify-content:end;
-    text-align: justify;
-    background-color: rgb(255, 255, 255, 0.9);
-    box-shadow: 5px 5px 20px var(--color-gray);
-}
-.contenedorAbout p{
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: var(--color-gray);
-}
-.indent{
-    text-indent: 30px;
 }
 
 .contenedorContacto {
@@ -356,7 +302,7 @@ input[type=text]:focus,
 
 .contenedorContacto p{
     font-size: 0.7rem;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--color-gray);
 }
 .contenedorContacto p span{
@@ -370,10 +316,10 @@ input[type=text]:focus,
 .map{
     margin: 4rem auto 0rem auto;
     width: 100%;
-    height:fit-content; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    height:fit-content;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
     background-attachment: fixed;
 }
 
@@ -381,13 +327,11 @@ input[type=text]:focus,
     width: 100%;
     box-shadow: 5px 5px 20px var(--color-gray);
 }
-.map a{
+.map a:hover{
     opacity: 1;
 }
 
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 769px) {
     .contacto{
         width: 100%;
     }
@@ -418,80 +362,5 @@ input[type=text]:focus,
     .contenedorContacto,
     .map {
         max-width: 1200px;
-    }
-}
-
-
-/* ****************************************** FOOTER ****************** */
-footer {
-    width: 100%;
-    height: 7rem;
-    background-color: var(--color-principal);
-    text-align: center;
-    color: var(--color-gold);
-    padding: 2rem;
-    display: grid;
-    grid-template-areas: "copyright cookies redes";
-    justify-items: center;
-    align-items: center;
-}
-
-.copyright{
-    grid-area: copyright;
-    font-size: 0.8rem;
-    font-weight: 100;
-}
-
-.cookies{
-    grid-area: cookies;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-}
-
-.cookies ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.cookies a {
-    margin-right: 0.5rem;
-    text-decoration: none;
-    color: var(--color-gold);
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.redes a{
-    display: grid;
-    margin-right: 1.5rem;
-    justify-items: center;
-    align-items: center;
-    text-decoration: none;
-}
-.redes img{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-.redes a:hover, .redesContacto a:hover, .cookies a:hover {
-    text-decoration: none;
-    opacity: 0.6;
-}
-
-@media screen and (max-width: 800px) {
-    footer{
-        grid-template-areas: "redes"
-                            "cookies"
-                            "copyright";
     }
 }
