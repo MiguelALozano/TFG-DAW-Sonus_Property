@@ -35,6 +35,7 @@ botonBuscarInmueble.addEventListener('click', function(event){
 				ascensorNo.checked = true;
 			baños.value = UsuarioJson.baños;	
 			estado.value = UsuarioJson.estado;
+			imagen.value = UsuarioJson.imagen;
 			novedad.value = UsuarioJson.novedad;
 			numHabitaciones.value = UsuarioJson.numHabitaciones;
 			planta.value = UsuarioJson.planta;

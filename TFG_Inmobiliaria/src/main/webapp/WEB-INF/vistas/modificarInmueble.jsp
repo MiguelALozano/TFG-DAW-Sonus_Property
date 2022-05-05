@@ -32,42 +32,50 @@
 				<form id="formModificar" class="form-alta">
 					<input type="number" id="idInmueble" name="idInmueble" placeholder="Id Inmueble" class="cuadro-form alta" autofocus>
 					<button id="botonBuscarInmueble" class="cuadro-form btn-pq">Buscar</button><br>
-					<label for="ciudad">Ciudad</label>
+					<label for="ciudad">Ciudad</label><br>
 					<select name="idCiudad" id="ciudad">
 						<c:forEach var="ele" items="${listaCiudades}">
 							<option value="${ele.idCiudad}">${ele.nombre}</option>
 						</c:forEach>
 					</select>
 					<br>
-					<label for="fechaAlta">Fecha de Alta</label>
+					<label for="fechaAlta">Fecha de Alta</label><br>
 					<input type="date" id="fechaAlta" name="fechaAlta" placeholder="Fecha de Alta" class="cuadro-form alta"><br>
 					<div>Ascensor</div>
-						<input type="checkbox" id="ascensorSi" name="ascensor" value="1" checked>
+						<input type="radio" id="ascensorSi" name="ascensor" value="1" checked>
 						<label for="ascensorSi">Si</label>
-						<input type="checkbox" id="ascensorNo" name="ascensor" value="0">
+						<input type="radio" id="ascensorNo" name="ascensor" value="0">
 						<label for="ascensorNo">No</label>
 					<br>
+					<label for="baños">Número de baños</label><br>
 					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" autofocus required><br>
+					<label for="estado">Estado del inmueble</label><br>
 					<input type="text" id="estado" name="estado" placeholder="Estado del inmueble" class="cuadro-form alta" required><br>
 					<!--  mirar como meter la imagen, FALTA ESTA PARTE -->
-					<label for="novedad">Novedad</label>
+					<label for="imagen">Imagen del inmueble</label><br>
+					<input type="text" id="imagen" name="imagen" placeholder="imagen del inmueble" class="cuadro-form alta" required><br>
+					<label for="novedad">Novedad</label><br>
 						<select id ="novedad" name="novedad">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
 					<br>
+					<label for="numHabitaciones">Número de habitaciones</label><br>
 					<input type="number" id="numHabitaciones" name="numHabitaciones" placeholder="número de habitaciones" class="cuadro-form alta" autofocus required><br>
+					<label for="planta">Planta</label><br>
 					<input type="text" id="planta" name="planta" placeholder="Planta" class="cuadro-form alta" required><br>
+					<label for="precio">Precio del inmueble</label><br>
 					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" autofocus required><br>
+					<label for="tamanio">Tamaño del inmueble</label><br>
 					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" autofocus required><br>
-					<label for="terraza">Terraza</label>
+					<label for="terraza">Terraza</label><br>
 						<select name="terraza" id="terraza">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
 					
 					<br>
-					<label for="tipoInmueble">Tipo de Inmueble</label>
+					<label for="tipoInmueble">Tipo de Inmueble</label><br>
 						<select name="idTipo" id="tipoInmueble">
 							<c:forEach var="ele" items="${listaTipos}">
 								<option value="${ele.idTipo}">${ele.tipo}</option>
