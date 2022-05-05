@@ -44,11 +44,11 @@ public class DataBaseWebSecurity extends WebSecurityConfigurerAdapter{
 					.antMatchers("/bootstrap/**","/content/**","/images/**", "/css/**", "js/**").permitAll()
 
 					// Las vistas publicas no requieren autenticacion
-					.antMatchers("/inicio","/login","/admon/altaUsuario").permitAll()
+					.antMatchers("/","/login","/admon/altaUsuario").permitAll()
 
 					// Asignar permisos a URLs por ROLES
-					.antMatchers("/cliente/**").hasAuthority("ROL_USER")
-					.antMatchers("/admon/**").hasAuthority("ROL_ADMON")
+					//.antMatchers("/cliente/**").hasAuthority("ROL_USER")
+					//.antMatchers("/admon/**").hasAuthority("ROL_ADMON")
 
 					// Todas las demas URLs de la Aplicacion requieren autenticacion
 					.anyRequest().authenticated()

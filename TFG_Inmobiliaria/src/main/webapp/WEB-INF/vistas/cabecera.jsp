@@ -20,7 +20,7 @@
 	<header>
         <div id="cabecera" class="cabecera">
             <div class="logo">
-                <a href="/inicio"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+                <a href="/"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
             </div>
         </div>
         <!-- <div class="cabecera">
@@ -35,9 +35,9 @@
     <!-- ****************************************** NAV ****************************************** -->
     <nav>
         <ul class="menu">
-        	<li><a href="/inicio"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+        	<li><a href="/"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
         	</li>
-            <li><a href="/inicio" class="activa">INICIO</a></li>
+            <li><a href="/" class="activa">INICIO</a></li>
             <li>
                 <div class="desplegable">INMUEBLES <!-- creamos un desplegable, desde el cual podemos acceder a las páginas Venta y Alquiler -->
                     <!--
@@ -50,7 +50,8 @@
             </li>
             <li><a href="../content/about.html">QUIÉNES SOMOS</a></li>
             <li><a href="../content/contact.html">CONTACTO</a></li>
-            <li><h4><a href="/inicioSesion">Inicia Sesión</a></h4></li>
+            <li><h4>Usuario: ${sessionUserName}</h4></li>
+            <li><h4><a href="/login">Inicia Sesión</a></h4></li>
             <li><h4><a href="/admon/altaUsuario">Regístrate</a></h4></li>
             <li><h4><a href="/logout">Cerrar Sesión</a></h4></li>
             <%-- La parte con su usuario correspondiente

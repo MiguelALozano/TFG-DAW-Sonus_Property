@@ -8,6 +8,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,15 +43,19 @@ public class HomeController {
 	@Autowired 
 	private IntPerfilDao perfilDao;
 	
-	@GetMapping("/inicio")
-	public String inicio(Model model) {
+	@GetMapping("/")
+	public String inicio(Model model, Authentication aut, HttpSession miSession) {
 		model.addAttribute("listaNovedades", inmuebleDao.findNovedades());
-		System.out.println(inmuebleDao.findNovedades());
 		model.addAttribute("listaCiudades", ciudadDao.findAll());
 		model.addAttribute("listaTipos", tipoDao.findAll());
+		if(aut != null) {
+			miSession.setAttribute("sessionUserName", aut.getName());
+			System.out.println("entro al if");
+			System.out.println(miSession.getAttribute("sessionUserName"));
+		}
 		return "inicio";
 	}
-	
+	/*
 	@GetMapping("/inicioSesion") //url por la que entramos en la aplicación desde barra de navegador o enlace href
 	public String login() {
 		return "login"; //nos dirige al jsp login
@@ -78,5 +83,5 @@ public class HomeController {
 		return "forward:/inicio"; 							//nos dirige de nuevo al inicio con forward (vamos de GetMapping a otro GetGetMapping)
 	}
 	
-	
+	*/
 }
