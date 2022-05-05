@@ -68,18 +68,17 @@ public class AdmonController {
 		//cuando creo un usuario simpre le doy perfil de usuario
 		List<Perfil> perfiles = new ArrayList<Perfil>();
 		perfiles.add(perfilDao.findById(1));
-		System.out.println("Perfiles " + perfiles);
 		usuario.setEnabled(1);
 		usuario.setFechaAlta(new Date());
 		//usuario.setPerfiles(null);
 		usuario.setPerfiles(perfiles);
 		//compruebo que los password coinciden
-		System.out.println("password usuario " + usuario.getPassword());
-		System.out.println("password repetido " + passwordRepetido);
 		if(!(usuario.getPassword().equals(passwordRepetido))) {
 			model.addAttribute("mensaje", "Los password introducidos no coinciden");
 			return "/altaUsuario";
 		}
+		usuario.setPassword("{noop}" + usuario.getPassword());
+		System.out.println("passwordBBDD: "+usuario.getPassword());
 		//si se selecciona el checkbox para añadir perfil de administrador le damos
 		//tambien ese perfil al usuario que estamos creando 
 		

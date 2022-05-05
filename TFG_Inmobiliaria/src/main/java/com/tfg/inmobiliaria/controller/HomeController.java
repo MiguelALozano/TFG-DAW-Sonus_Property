@@ -45,6 +45,7 @@ public class HomeController {
 	@GetMapping("/inicio")
 	public String inicio(Model model) {
 		model.addAttribute("listaNovedades", inmuebleDao.findNovedades());
+		System.out.println(inmuebleDao.findNovedades());
 		model.addAttribute("listaCiudades", ciudadDao.findAll());
 		model.addAttribute("listaTipos", tipoDao.findAll());
 		return "inicio";
@@ -68,44 +69,6 @@ public class HomeController {
 		}	
 	}
 	
-	@GetMapping("/altaUsuario")
-	public String crearUsuario() {
-		return "altaUsuario";
-	}
-	
-	@PostMapping("/altaUsuario")
-	public String procesarAltaUsuario(Usuario usuario, @RequestParam (required = false) boolean perfilAdmon, @RequestParam String passwordRepetido, Model model ) {
-		
-		//cuando creo un usuario simpre le doy perfil de usuario
-		List<Perfil> perfiles = new ArrayList<Perfil>();
-		perfiles.add(perfilDao.findById(1));
-		System.out.println("Perfiles " + perfiles);
-		usuario.setEnabled(1);
-		usuario.setFechaAlta(new Date());
-		//usuario.setPerfiles(null);
-		usuario.setPerfiles(perfiles);
-		//compruebo que los password coinciden
-		System.out.println("password usuario " + usuario.getPassword());
-		System.out.println("password repetido " + passwordRepetido);
-		if(!(usuario.getPassword().equals(passwordRepetido))) {
-			model.addAttribute("mensaje", "Los password introducidos no coinciden");
-			return "/altaUsuario";
-		}
-		//si se selecciona el checkbox para añadir perfil de administrador le damos
-		//tambien ese perfil al usuario que estamos creando 
-		
-		if(perfilAdmon) {
-			perfiles.add(perfilDao.findById(2));
-			usuario.setPerfiles(perfiles);
-		}
-		//doy de alta el usuario en la BBDD
-		if (usuarioDao.altaUsuario(usuario))
-				return "redirect:/inicio";
-		else {
-			model.addAttribute("mensaje", "Ya existe un usuario con ese Username");
-			return "/altaUsuario";
-		}
-	}
 	@GetMapping("/logout") 									//método para cerrar la sesión actual
 	public String salir(HttpSession sesion, Model model) {
 		sesion.removeAttribute("sesion"); 					//borramos el atributo de sesión

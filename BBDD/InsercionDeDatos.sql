@@ -31,9 +31,9 @@ INSERT INTO PERFILES VALUES
 
 -- Insertamos usuarios en la BBDD
 INSERT INTO USUARIOS VALUES
-('MiguelALozano', '1234', 1, 'miguelalozano@gmail.com', 'Miguel Ángel', 'Lozano', 'c/La Rioja, 3, 4ºA', '2020-01-01'),
-('RaúlRSanz', '1234', 1, 'raulrruiz@gmail.com', 'Raúl', 'Ruiz', 'c/Marte, 12, 1ºD', '2020-01-01'),
-('LauraSAlba', '1234', 1, 'laurasalba@hotmail.com', 'Laura', 'Sanz', 'c/Vitruvio, 20, 2ºC', '2021-07-21');
+('MiguelALozano', '{noop}1234', 1, 'miguelalozano@gmail.com', 'Miguel Ángel', 'Lozano', 'c/La Rioja, 3, 4ºA', '2020-01-01'),
+('RaúlRSanz', '{noop}1234', 1, 'raulrruiz@gmail.com', 'Raúl', 'Ruiz', 'c/Marte, 12, 1ºD', '2020-01-01'),
+('LauraSAlba', '{noop}1234', 1, 'laurasalba@hotmail.com', 'Laura', 'Sanz', 'c/Vitruvio, 20, 2ºC', '2021-07-21');
 
 -- Insertamos usuarios_perfiles en la BBDD
 INSERT INTO USUARIO_PERFILES VALUES
