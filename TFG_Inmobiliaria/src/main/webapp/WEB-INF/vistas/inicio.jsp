@@ -57,7 +57,7 @@
 				<c:forEach var="ele" items="${listaNovedades}">        
 		            <article class="contenedor-fichas">
 		                <div class="ficha">
-		                    <div><a href="/inmueble/verInmueble/${ele.idInmueble}"><img src="images/inmuebles/${ele.imagen}" alt="Vivienda"></a></div>
+		                    <div><a href="/inmueble/verInmueble/${ele.idInmueble}"><img src="images/inmuebles/${ele.imagen}.jpg" alt="Vivienda"></a></div>
 		                    <div><h4>${ele.ciudad.nombre}</h4></div>
 		                    <div><h3>${ele.tipo.tipo}</h3></div>
 		                    <div><h4>${ele.tamanio} m2</h4></div>
