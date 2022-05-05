@@ -37,7 +37,7 @@
 						</select>
 						<br>
 
-
+					<!-- 
 					<p>¿Raúl que te parece esta opción?</p>
 					<select name="idCiudad" id="ciudad" class="cuadro-form">
 						<option>Ciudad</option>
@@ -45,17 +45,20 @@
 							<option value="${ele.idCiudad}">${ele.nombre}</option>
 						</c:forEach>
 					</select>
-
+					 -->
 					
 					<div>Ascensor</div>
-						<input type="checkbox" id="ascensorSi" name="ascensor" value="1" checked  class="cuadro-form">
+						<input type="radio" id="ascensorSi" name="ascensor" value="1" checked  class="cuadro-form">
 						<label for="ascensorSi">Si</label>
-						<input type="checkbox" id="ascensorNo" name="ascensor" value="0"  class="cuadro-form">
+						<input type="radio" id="ascensorNo" name="ascensor" value="0"  class="cuadro-form">
 						<label for="ascensorNo">No</label>
 					<br>
+					<label for="baños">Número de baños</label><br>
 					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" required><br>
+					<label for="estado">Estado del inmueble</label><br>
 					<input type="text" id="estado" name="estado" placeholder="Estado del inmueble" class="cuadro-form alta" required><br>
 					<!--  mirar como meter la imagen, FALTA ESTA PARTE -->
+					<label for="imagen">Nombre de la imagen del inmueble</label><br>
 					<input type="text" id="imagen" name="imagen" placeholder="Nombre de la imagen" class="cuadro-form alta" required><br>
 					
 					
@@ -67,19 +70,24 @@
 							<option value="0">No</option>
 						</select>
 						<br>
-
+					<!-- 
 						<p>¿Raúl que te parece esta opción?</p>
 						<select id ="novedad" name="novedad" class="cuadro-form">
 							<option value="">Novedad</option>
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
+					 -->
 					<br>
+					<label for="numHabitaciones">Número de habitaciones</label><br>
 					<input type="number" id="numHabitaciones" name="numHabitaciones" placeholder="Número de habitaciones" class="cuadro-form alta" required><br>
+					<label for="planta">Planta</label><br>
 					<input type="text" id="planta" name="planta" placeholder="Planta" class="cuadro-form alta" required><br>
+					<label for="precio">Precio del inmueble</label><br>
 					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" required><br>
+					<label for="tamanio">Tamaño de inmueble</label><br>
 					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
-					<label for="terraza">Terraza</label>
+					<label for="terraza">Terraza</label><br>
 						<select name="terraza" id="terraza" class="cuadro-form">
 							<option value="1">Si</option>
 							<option value="0">No</option>

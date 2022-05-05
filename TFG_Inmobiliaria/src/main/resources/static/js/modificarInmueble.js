@@ -70,6 +70,7 @@ botonModificarInmueble.addEventListener('click', function(event){
 			ascensor : tieneAscensor,
 			baños : baños.value,
 			estado : estado.value,
+			imagen: imagen.value,
 			novedad : novedad.value,
 			numHabitaciones : numHabitaciones.value,
 			planta : planta.value,
