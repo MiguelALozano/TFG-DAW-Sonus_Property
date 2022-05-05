@@ -53,6 +53,7 @@
             <li><a href="../content/contact.html">CONTACTO</a></li>
             <li><h4><a href="/inicioSesion">Inicia Sesión</a></h4></li>
             <li><h4><a href="/altaUsuario">Regístrate</a></h4></li>
+            <li><h4><a href="/logout">Cerrar Sesión</a></h4></li>
             <%-- La parte con su usuario correspondiente
             <li><h4>Bienvenido ${sesion.nombre  }</h4></li>
             <li><h4><a href="/logout">Cerrar Sesión</a></h4></li> --%>
