@@ -28,6 +28,7 @@
             <div>
                 <h1>Datos del Inmueble</h1>
                 <h2>Rellena los siguientes campos</h2>
+                <p id="msgInmuebleNoExiste" style="display:none">No existe ningun inmueble con ese id</p>
 				
 				<form id="formModificar" class="form-alta">
 					<input type="number" id="idInmueble" name="idInmueble" placeholder="Id Inmueble" class="cuadro-form alta" autofocus>

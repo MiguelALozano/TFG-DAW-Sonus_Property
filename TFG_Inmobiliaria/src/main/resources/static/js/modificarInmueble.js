@@ -3,6 +3,7 @@
 //Buscar Inmueble
 botonBuscarInmueble.addEventListener('click', function(event){
 	event.preventDefault();
+	
 	console.log('entro al buscar inmueble');
 	
 	fetch(`http://localhost:4000/rest/inmobiliaria/buscarInmueble/${idInmueble.value}`, {
@@ -11,13 +12,15 @@ botonBuscarInmueble.addEventListener('click', function(event){
 		})
 		.then(response =>{
 			if(response.status == 200){
-				alert('El inmueble existe');
+				//alert('El inmueble existe');
+				msgInmuebleNoExiste.style.display='none';
 				//reseteo los checkbox de resultados anteriores
 				ascensorSi.checked = false;
 				ascensorNo.checked = false;
 				return response.json();
 			}else{
-				alert(`No existe ningún inmueble con ese id ${idInmueble.value}`)
+				//alert(`No existe ningún inmueble con ese id ${idInmueble.value}`)
+				msgInmuebleNoExiste.style.display='block';
 				//borro los posibles resultados anteriores que estuvieran en el formulario
 				formModificar.reset();
 				//perfilUser.checked = false;
