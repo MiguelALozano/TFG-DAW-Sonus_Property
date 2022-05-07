@@ -26,7 +26,7 @@
         <section class="seccion-alta">
             <div>
                 <h1>ADMINISTRADOR</h1><br>
-                <h1>Bienvenido ${usuario.nombre }</h1>
+                <h1>Bienvenido ${sessionUserName}</h1>
  
                 <h2>Selecciona que operación quieres realizar con USUARIOS</h2>
                 <div class="botonesAdmon">
@@ -46,8 +46,6 @@
                 </div>
             </div> 
         </section>
-
-
 
 
 	</main>

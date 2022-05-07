@@ -63,7 +63,7 @@
 		                    <div><h4>${ele.tamanio} m2</h4></div>
 		                    <div><h5>${ele.precio} &euro;</h5></div>
 		                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
-		                    <div><h4><a class="añadirFavoritos" data-idInmueble=${ele.idInmueble} href="#">Añadir a Favoritos</a></h4></div>
+		                    <div><h4><a class="añadirFavoritos" data-idInmueble=${ele.idInmueble } href="#">Añadir a Favoritos</a></h4></div>
 		                </div>
 		            </article>
 	            </c:forEach> 

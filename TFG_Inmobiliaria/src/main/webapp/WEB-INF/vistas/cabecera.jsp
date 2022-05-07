@@ -9,7 +9,7 @@
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/header.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
+    <link rel="stylesheet" type="text/css" href="../../css/header.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- definición de los textos -->
@@ -21,7 +21,7 @@
 	<header>
         <div id="cabecera" class="cabecera">
             <div class="logo">
-                <a href="/"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
+                <a href="/"><img src="../../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
             </div>
         </div>
         <!-- <div class="cabecera">
@@ -36,8 +36,6 @@
     <!-- ****************************************** NAV ****************************************** -->
     <nav>
         <ul class="menu">
-        	<li><a href="/"><img src="../images/svg/logo_svg.svg" alt="logo Sonus Property"></a><!-- utilizamos esta imagen como enlace a la dirección index.html -->
-        	</li>
             <li><a href="/" class="activa">INICIO</a></li>
             <li>
                 <div class="desplegable">INMUEBLES <!-- creamos un desplegable, desde el cual podemos acceder a las páginas Venta y Alquiler -->
@@ -49,8 +47,8 @@
                  </div> -->      
                 </div>
             </li>
-            <li><a href="../content/about.html">QUIÉNES SOMOS</a></li>
-            <li><a href="../content/contact.html">CONTACTO</a></li>
+            <li><a href="../../content/about.html">QUIÉNES SOMOS</a></li>
+            <li><a href="../../content/contact.html">CONTACTO</a></li>
             <li><h4 id="usuario">${sessionUserName}</h4></li>
             <li><h4><a href="/login">Inicia Sesión</a></h4></li>
             <li><h4><a href="/admon/altaUsuario">Regístrate</a></h4></li>
