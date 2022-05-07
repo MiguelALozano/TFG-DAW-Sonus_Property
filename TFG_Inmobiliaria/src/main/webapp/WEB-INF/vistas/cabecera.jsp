@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- definición de los textos -->
     <link rel="icon" type="image/svg+xml" href="images/svg/favicon.svg" sizes="any"> <!-- etiqueta en la que enlazamos el icono que aparecerá en la pesatña del navegador junto al title, llamado favicon-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
 </head>
 <body>
 	<header>
@@ -50,7 +51,7 @@
             </li>
             <li><a href="../content/about.html">QUIÉNES SOMOS</a></li>
             <li><a href="../content/contact.html">CONTACTO</a></li>
-            <li><h4>Usuario: ${sessionUserName}</h4></li>
+            <li><h4 id="usuario">${sessionUserName}</h4></li>
             <li><h4><a href="/login">Inicia Sesión</a></h4></li>
             <li><h4><a href="/admon/altaUsuario">Regístrate</a></h4></li>
             <li><h4><a href="/logout">Cerrar Sesión</a></h4></li>

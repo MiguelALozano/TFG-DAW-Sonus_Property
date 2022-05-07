@@ -40,3 +40,9 @@ INSERT INTO USUARIO_PERFILES VALUES
 ('MiguelALozano', 2),
 ('RaúlRSanz', 2),
 ('LauraSAlba', 1);
+
+-- Insertamos favoritos en un usuario
+INSERT INTO FAVORITOS VALUES
+(1,1,"LauraSAlba"),
+(2,4,"LauraSAlba"),
+(3,5,"LauraSAlba");

@@ -1,5 +1,7 @@
 package com.tfg.inmobiliaria.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tfg.inmobiliaria.beansentity.Favorito;
 import com.tfg.inmobiliaria.beansentity.Inmueble;
 import com.tfg.inmobiliaria.beansentity.Usuario;
+import com.tfg.inmobiliaria.dto.FavoritoDTO;
+import com.tfg.inmobiliaria.modelo.dao.IntFavoritoDao;
 import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
 import com.tfg.inmobiliaria.modelo.dao.IntUsuarioDao;
 
@@ -25,6 +30,9 @@ public class ControladorRest {
 	
 	@Autowired
 	private IntInmuebleDao inmuebleRepo;
+	
+	@Autowired
+	private IntFavoritoDao favoritoRepo;
 	
 	//SERVICIO REST PARA USUARIOS
 	
@@ -50,6 +58,33 @@ public class ControladorRest {
 			new ResponseEntity<Usuario>(usuario, HttpStatus.OK):
 			new ResponseEntity<Usuario>(usuario, HttpStatus.NOT_FOUND);
 	}
+	
+	@GetMapping("/buscarFavoritosUsuario/{username}")
+	public ResponseEntity<List<Favorito>> procesarBuscarFavoritosUsuario(@PathVariable ("username") String username){
+		List<Favorito> listaFavoritos = favoritoRepo.findByUsername(username);
+		if(listaFavoritos != null && !listaFavoritos.isEmpty())
+			return new ResponseEntity<List<Favorito>>(listaFavoritos, HttpStatus.OK);
+		else
+			return new ResponseEntity<List<Favorito>>(listaFavoritos, HttpStatus.NO_CONTENT);
+	}
+	
+	@PutMapping("/añadirInmuebleFavorito")
+	public ResponseEntity<Favorito> procesarAñadirInmuebleFavorito(@RequestBody FavoritoDTO favoritoDto){
+		System.out.println("entro a añadirInmuebleFavorito");
+		System.out.println("FavoritoDTO" + favoritoDto);
+		Usuario usuario = usuarioRepo.findById(favoritoDto.getUsernameDTO());
+		System.out.println("usuario " + usuario);
+		Inmueble inmueble = inmuebleRepo.findById(favoritoDto.getIdInmuebleDTO());
+		System.out.println("Inmueble" + inmueble);
+		Favorito favorito = new Favorito(favoritoDto.getIdFavoritoDTO(), inmueble, usuario);
+		return favoritoRepo.añadirFavoritos(favorito) ?
+				new ResponseEntity<Favorito>(favorito, HttpStatus.OK):
+				new ResponseEntity<Favorito>(favorito,HttpStatus.BAD_REQUEST);
+	//public String prueba() {	
+	//	return "prueba";
+	} 
+		
+
 	
 	//SERVICIO REST PARA INMUEBLES
 	
