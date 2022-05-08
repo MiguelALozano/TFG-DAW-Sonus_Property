@@ -17,10 +17,13 @@
 }
 
 html {
-    height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
+    margin: 0;
+    margin-bottom: 5rem;
     min-width: 400px;
     height: 100%;
     display: flex;
@@ -95,9 +98,23 @@ main{
     margin: 0.5rem;
     text-align: center;
 }
- 
+
+.btn-volver{
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+}
 .admon{
     margin: 0.5rem;
+}
+
+/* ********************* TODOS ****************** */
+.seccion-todos {
+	margin: auto;
+	width: 60%;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    text-align: center;
+    /*font-size: 38px;*/
 }
 
 /* ********************* FICHAS ****************** */
@@ -112,7 +129,7 @@ main{
 }
 
 .seccion-fichas2 {
-    width: 70%;
+    width: 50%;
     margin: 2rem auto;
     display: flex;
     flex-direction: row;
@@ -124,8 +141,8 @@ main{
     position: relative;
     margin: 1rem;
     width: 15rem;
-    height: 24rem;
-    margin: 1rem auto;
+    height: 25rem;
+    margin: 1rem 2rem;
     justify-content: center;
     align-items: flex-start;
     background-color: var(--color-white);
@@ -178,6 +195,7 @@ main{
     text-decoration: none;
 }
 
+
 /* ********************* PANEL DE CONTROL ****************** */
  
 .botonesAdmon {
@@ -189,19 +207,6 @@ main{
     justify-content: center;
     list-style: none;
     padding: 0.4rem;
-}
-
-/* #botonBuscarUsuario,
-#botonModioficarUsuario {
-    padding: 1rem;
-    margin: 1rem .2rem 5rem .2rem;
-    border: 0 solid white;
-    background-color: var(--color-white);
-    color: var(--color-gray);
-    box-shadow: 0px 0px 5px var(--color-gray);
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
 }
 
 /* ********************* ALTA ****************** */

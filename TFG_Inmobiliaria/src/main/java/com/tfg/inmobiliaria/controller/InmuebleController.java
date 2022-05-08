@@ -1,5 +1,8 @@
 package com.tfg.inmobiliaria.controller;
 
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
+
 
 @Controller
 @RequestMapping("/inmueble")
@@ -47,4 +51,12 @@ public class InmuebleController {
 		}
 		return "mostrarBusquedaInmuebles";
 	}
+	
+	@GetMapping("/verTodos")
+	public String verTodos(Model model, HttpSession miSession) {
+		model.addAttribute("listaInmuebles", inmuebleDao.findAll());
+		System.out.println("veo todos");
+		return "listarInmuebles";
+	}
+	
 }

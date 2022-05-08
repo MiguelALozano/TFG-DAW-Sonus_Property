@@ -9,6 +9,7 @@
 
 .contenedorDetalles {
     padding: 1rem;
+    margin: 0 auto 3rem auto;
     background-color: rgb(255, 255, 255, 0.9);
     box-shadow: 5px 5px 20px var(--color-gray);
 }
