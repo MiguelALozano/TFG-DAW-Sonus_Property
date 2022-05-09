@@ -5,7 +5,7 @@
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
 <head><!-- en esta etiqueta añadimos los encabezados de la página, el usuario se abstrae de esto -->
-    <title>Modificar Usuario</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
+    <title>Modificar Inmueble</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
 					<input type="number" id="idInmueble" name="idInmueble" placeholder="Id Inmueble" class="cuadro-form alta" autofocus>
 					<button id="botonBuscarInmueble" class="cuadro-form btn-pq">Buscar</button><br>
 					<label for="ciudad">Ciudad</label><br>
-					<select name="idCiudad" id="ciudad">
+					<select name="idCiudad" id="ciudad" class="cuadro-form alta">
 						<c:forEach var="ele" items="${listaCiudades}">
 							<option value="${ele.idCiudad}">${ele.nombre}</option>
 						</c:forEach>
@@ -46,7 +46,7 @@
 						<input type="radio" id="ascensorSi" name="ascensor" value="1" checked>
 						<label for="ascensorSi">Si</label>
 						<input type="radio" id="ascensorNo" name="ascensor" value="0">
-						<label for="ascensorNo">No</label>
+						<label for="ascensorNo">No</label><br>
 					<br>
 					<label for="baños">Número de baños</label><br>
 					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" autofocus required><br>
@@ -56,7 +56,7 @@
 					<label for="imagen">Imagen del inmueble</label><br>
 					<input type="text" id="imagen" name="imagen" placeholder="imagen del inmueble" class="cuadro-form alta" required><br>
 					<label for="novedad">Novedad</label><br>
-						<select id ="novedad" name="novedad">
+						<select id ="novedad" name="novedad" class="cuadro-form alta">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
@@ -70,22 +70,23 @@
 					<label for="tamanio">Tamaño del inmueble</label><br>
 					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" autofocus required><br>
 					<label for="terraza">Terraza</label><br>
-						<select name="terraza" id="terraza">
+						<select name="terraza" id="terraza" class="cuadro-form alta">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
 					
 					<br>
 					<label for="tipoInmueble">Tipo de Inmueble</label><br>
-						<select name="idTipo" id="tipoInmueble">
+						<select name="idTipo" id="tipoInmueble" class="cuadro-form alta">
 							<c:forEach var="ele" items="${listaTipos}">
 								<option value="${ele.idTipo}">${ele.tipo}</option>
 							</c:forEach>
 						</select>
 					<br>
-					<input type="submit" value="Modificar" id="botonModificarInmueble" class="cuadro-form btn-pq">
-					<input type="submit" value="Borrar Inmueble" id="botonBorrarInmueble" class="cuadro-form btn-pq">
-					<input type="reset" value="Borrar Formulario" class="cuadro-form btn-pq">
+					<input type="submit" value="Modificar" id="botonModificarInmueble" class="cuadro-form">
+					<input type="submit" value="Borrar Inmueble" id="botonBorrarInmueble" class="cuadro-form">
+					<input type="reset" value="Borrar Formulario" class="cuadro-form">
+	      			<input type="button" onclick="history.back()" name="volver atrás" value="Volver atrás" class="cuadro-form">
 				</form>
 				<p>${mensaje}</p>
             </div>  

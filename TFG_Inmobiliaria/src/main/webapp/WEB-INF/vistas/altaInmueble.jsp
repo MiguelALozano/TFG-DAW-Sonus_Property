@@ -28,81 +28,68 @@
                 <h1>Dar de Alta un Inmueble</h1>
                 <h2>Rellena los siguientes campos</h2><br><br>
 				<h1>${mensaje}</h1>
+				
 				<form action="altaInmueble" method="post" class="form-alta">
 					<label for="ciudad">Ciudad</label><br>
-						<select name="idCiudad" id="ciudad" class="cuadro-form">
+						<select name="idCiudad" id="ciudad" class="cuadro-form alta">
 							<c:forEach var="ele" items="${listaCiudades}">
 								<option value="${ele.idCiudad}">${ele.nombre}</option>
 							</c:forEach>
 						</select>
-						<br>
-
-					<!-- 
-					<p>¿Raúl que te parece esta opción?</p>
-					<select name="idCiudad" id="ciudad" class="cuadro-form">
-						<option>Ciudad</option>
-						<c:forEach var="ele" items="${listaCiudades}">
-							<option value="${ele.idCiudad}">${ele.nombre}</option>
-						</c:forEach>
-					</select>
-					 -->
-					
+					<br>		
 					<div>Ascensor</div>
-						<input type="radio" id="ascensorSi" name="ascensor" value="1" checked  class="cuadro-form">
+						<input type="radio" id="ascensorSi" name="ascensor" value="1" checked>
 						<label for="ascensorSi">Si</label>
-						<input type="radio" id="ascensorNo" name="ascensor" value="0"  class="cuadro-form">
-						<label for="ascensorNo">No</label>
-					<br>
+						<input type="radio" id="ascensorNo" name="ascensor" value="0">
+						<label for="ascensorNo">No</label><br><br>
+						
 					<label for="baños">Número de baños</label><br>
 					<input type="number" id="baños" name="baños" placeholder="Número de baños" class="cuadro-form alta" required><br>
+					
 					<label for="estado">Estado del inmueble</label><br>
 					<input type="text" id="estado" name="estado" placeholder="Estado del inmueble" class="cuadro-form alta" required><br>
-					<!--  mirar como meter la imagen, FALTA ESTA PARTE -->
+					
 					<label for="imagen">Nombre de la imagen del inmueble</label><br>
 					<input type="text" id="imagen" name="imagen" placeholder="Nombre de la imagen" class="cuadro-form alta" required><br>
-					
-					
-					
-					
-					<label for="novedad">Novedad</label>
-						<select id ="novedad" name="novedad" class="cuadro-form">
+						
+					<label for="novedad">Novedad</label><br>
+						<select id ="novedad" name="novedad" class="cuadro-form alta">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
-						<br>
-					<!-- 
-						<p>¿Raúl que te parece esta opción?</p>
-						<select id ="novedad" name="novedad" class="cuadro-form">
-							<option value="">Novedad</option>
-							<option value="1">Si</option>
-							<option value="0">No</option>
-						</select>
-					 -->
 					<br>
+					
 					<label for="numHabitaciones">Número de habitaciones</label><br>
 					<input type="number" id="numHabitaciones" name="numHabitaciones" placeholder="Número de habitaciones" class="cuadro-form alta" required><br>
+					
 					<label for="planta">Planta</label><br>
 					<input type="text" id="planta" name="planta" placeholder="Planta" class="cuadro-form alta" required><br>
+					
 					<label for="precio">Precio del inmueble</label><br>
-					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" required><br>
+					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" required><br>	
+					
 					<label for="tamanio">Tamaño de inmueble</label><br>
-					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
+					
 					<label for="terraza">Terraza</label><br>
-						<select name="terraza" id="terraza" class="cuadro-form">
+						<select name="terraza" id="terraza" class="cuadro-form alta">
 							<option value="1">Si</option>
 							<option value="0">No</option>
 						</select>
-					
 					<br>
+					
+					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
+					
 					<label for="tipoInmueble">Tipo de Inmueble</label><br>
-						<select name="idTipo" id="tipoInmueble" class="cuadro-form">
+						<select name="idTipo" id="tipoInmueble" class="cuadro-form alta">
 							<c:forEach var="ele" items="${listaTipos}">
 								<option value="${ele.idTipo}">${ele.tipo}</option>
 							</c:forEach>
 						</select>
 					<br>
-					<input type="submit" value="Alta" class="cuadro-form btn-pq">
-					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
+					
+					<input type="submit" value="Alta" class="cuadro-form">
+					<input type="reset" value="Borrar" class="cuadro-form">
+					<input type="button" onclick="history.back()" name="volver atrás" value="Volver atrás" class="cuadro-form">
 				</form>
             </div>  
         </section>

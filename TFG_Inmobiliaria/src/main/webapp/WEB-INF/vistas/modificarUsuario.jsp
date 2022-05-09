@@ -44,12 +44,13 @@
 					<input type="password" id="password" name="password" placeholder="Nueva Password" class="cuadro-form alta"><br>
 									
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
-					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilUser" name="perfilUser" value="true" class="cuadro-form">  Perfil de Usuario </label></h3>
-					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form">  Añadir perfil de administrador al usuario </label></h3>
+					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilUser" name="perfilUser" value="true">  Perfil de Usuario </label></h3><br>
+					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true">  Añadir perfil de administrador al usuario </label></h3><br>
 					
 					<input type="submit" value="Modificar Usuario" id="botonModificarUsuario" class="cuadro-form">
 					<input type="submit" value="Eliminar Usuario" id="botonBorrarUsuario" class="cuadro-form">
 					<input type="reset" value="Borrar Formulario" class="cuadro-form">
+					<input type="button" onclick="history.back()" name="volver atrás" value="Volver atrás" class="cuadro-form">
 				</form>
 				<p>${mensaje}</p>
             </div>  

@@ -42,7 +42,7 @@
                     <a href="/admon/altaInmueble"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar/Eliminar inmueble</button></a>
                     <a href="/admon/modificarInmueble"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver inmueble</button></a>
-                    <a href="/admon/modificarInmueble"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los inmuebles</button></a>
+                    <a href="/inmueble/verTodos"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los inmuebles</button></a>
                 </div>
             </div> 
         </section>

@@ -46,7 +46,7 @@
                     <div class="detalles">
                         <h3>Características del Inmueble<hr></h3><br>
                         <p>Número de habitaciones: <span>${inmueble.numHabitaciones}</span></p>
-                        <p>Tamaño: <span>${inmueble.tamanio}</span></p>
+                        <p>Tamaño: <span>${inmueble.tamanio} m²</span></p>
                         <p>Número de baños: <span>${inmueble.baños}</span></p>
                         <p>Terraza: <span>${inmueble.terraza}</span></p>
                     </div>
@@ -62,10 +62,10 @@
 	                </div>
                  
                 </div>    
-	                <div class="btn-volver">
-	                		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
-	                </div>
-            	</div>
+	         	<div class="btn-volver">
+	      			<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
+	   			</div>
+       		</div>
             	 
         </section>
     </main>

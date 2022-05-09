@@ -40,10 +40,11 @@
 					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
 					<sec:authorize access="hasAnyAuthority('ROL_USER','ROL_ADMON')">
-						<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form"> Añadir perfil de administrador al usuario</label></h3>
+						<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true"> Añadir perfil de administrador al usuario</label></h3><br>
 					</sec:authorize>
 					<input type="submit" value="Alta" class="cuadro-form btn-pq">
 					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
+					<input type="button" onclick="history.back()" name="volver atrás" value="Volver" class="cuadro-form btn-pq">
 				</form>
             </div>  
         </section>

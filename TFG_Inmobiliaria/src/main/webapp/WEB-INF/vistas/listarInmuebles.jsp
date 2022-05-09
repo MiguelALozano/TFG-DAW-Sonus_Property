@@ -6,7 +6,7 @@
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
 <head><!-- en esta etiqueta añadimos los encabezados de la página, el usuario se abstrae de esto -->
-    <title>Todas nuestras propiedades</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
+    <title>Todos nuestros Inmuebles</title><!-- etiqueta que le da nombre a la web, aparece en la pestaña del navegador junto al favicon -->
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
     <!-- ****************************************** SECTION VER TODOS ****************************************** -->    
 		<section class="seccion-fichas seccion-todos">
 			<div>
-				<h1>Nuestras Viviendas</h1>
+				<h1>Nuestros Inmuebles</h1>
 			</div>
 			<div class="seccion-fichas2">
 				<c:forEach var="ele" items="${listaInmuebles}">        
@@ -35,7 +35,7 @@
 		                    <div><a href="/inmueble/verInmueble/${ele.idInmueble}"><img src="../images/inmuebles/${ele.imagen}.jpg" alt="Vivienda"></a></div>
 		                    <div><h4>${ele.ciudad.nombre}</h4></div>
 		                    <div><h3>${ele.tipo.tipo}</h3></div>
-		                    <div><h4>${ele.tamanio} m2</h4></div>
+		                    <div><h4>${ele.tamanio} m²</h4></div>
 		                    <div><h5>${ele.precio} &euro;</h5></div>
 		                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
 		                    <sec:authorize access="hasAnyAuthority('ROL_USER','ROL_ADMON')">
@@ -45,6 +45,9 @@
 		            </article>
 	            </c:forEach> 
 			</div>
+			<div class="btn-volver">
+	      		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
+	   		</div>
         </section>
     </main>
 

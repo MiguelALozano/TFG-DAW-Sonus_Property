@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> 
 
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -24,52 +25,31 @@
     
     <main>
         <!-- ****************************************** SECTION DETALLES ****************************************** -->
-        <section class="seccionDetalle">
-            <div>
-                <h1>Detalles de los inmueble localizados</h1><br>
-      			<c:forEach var="ele" items="${listaInmuebles}">          
-	                <div class="contenedorDetalles">
-		                <div class="imagenDetalles">
-		                	<img src="../../images/inmuebles/${ele.imagen}.jpg" alt="Vivienda">
-		                </div> 
-	                    <div>
-	                        <h3>Descripción del Inmueble</h3><hr>
-	                        <p>Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de 'Playa de los Alemanes' en Zahara de los Atunes.</p>
-	                        <p>La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.</p>    
-	                        <p>La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.</p>    
-	                        <p>¡Contácta con nosotros para una visita!</p>    
-	                    </div>
-	                    <div class="detalles">
-	                        <h3>Detalles del Inmueble<hr></h3><br>
-	                        <p>Precio:  <span> ${ele.precio} &euro;</span></p>
-	                        <p>Estado del inmueble: <span>${ele.estado}</span></p>
-	                        <p>Planta: <span>${ele.planta}</span></p>
-	                        <p>Ascensor: <span>${ele.ascensor}</span></p>
-	                    </div>
-	
-	                    <div class="detalles">
-	                        <h3>Características del Inmueble<hr></h3><br>
-	                        <p>Número de habitaciones: <span>${inmueble.numHabitaciones}</span></p>
-	                        <p>Tamaño: <span>${ele.tamanio}</span></p>
-	                        <p>Número de baños: <span>${ele.baños}</span></p>
-	                        <p>Terraza: <span>${ele.terraza}</span></p>
-	                    </div>
-	
-	                    <div class="detalles">
-	                    	<h3>Localización<hr></h3><br>
-	                        <p>Ciudad: <span>${ele.ciudad.nombre}</span></p>
-	                        <p>Tipo de inmueble: <span>${ele.tipo.tipo}</span></p>
-	                    </div>
-		                <div class="map">
-		                    <a href="https://www.google.com/maps/place/ESCUELA+TELEFONICA/@40.3833361,-3.6287205,19.95z/data=!4m13!1m7!3m6!1s0xd4225af7347dfc9:0x5087831a051c8a7c!2sC.+de+Bruno+Ab%C3%BAndez,+28031+Madrid!3b1!8m2!3d40.3834547!4d-3.6283768!3m4!1s0xd4225af1583175d:0xca4496d5b6b32cd6!8m2!3d40.3836392!4d-3.6289247" target="blank">
-		                    <img src="../../images/map.png"></a>
+        <section class="seccion-fichas seccion-todos">
+			<div>
+				<h1>Inmuebles localizados</h1>
+			</div>
+			<p>${mensaje}</p>
+			<div class="seccion-fichas2">
+				<c:forEach var="ele" items="${listaInmuebles}">        
+		            <article class="contenedor-fichas">
+		                <div class="ficha">
+		                <div><a href="../inmueble/verInmueble/${ele.idInmueble}"><img src="../../images/inmuebles/${ele.imagen}.jpg" alt="Vivienda"></a></div>
+		                 <div><h4>${ele.ciudad.nombre}</h4></div>   
+		                 <div><h3>${ele.tipo.tipo}</h3></div>
+		                    <div><h4>${ele.tamanio} m²</h4></div>
+		                    <div><h5>${ele.precio} &euro;</h5></div>
+		                    <div><h4><a href="../inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
+		                    <sec:authorize access="hasAnyAuthority('ROL_USER','ROL_ADMON')">
+		                    	<div><h4><a class="añadirFavoritos" data-idInmueble=${ele.idInmueble } href="#">Añadir a Favoritos</a></h4></div>
+		                   </sec:authorize>   
 		                </div>
-	                </div>
-        		</c:forEach>        
-		                <div class="btn-volver">
-		                		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
-		                </div>
-            </div> 
+		            </article>
+	            </c:forEach> 
+			</div>
+	         <div class="btn-volver">
+	      		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
+	   		</div>
         </section>
     </main>
 	
