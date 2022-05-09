@@ -17,13 +17,90 @@ INSERT INTO TIPOS VALUES
 
 -- Insertamos inmuebles en la BBDD
 INSERT INTO INMUEBLES VALUES
-(1, 1, 1, 3, 190000, 'inmueble1', 120, 2, 'obra nueva', 'primera', 1, 1, '2021-03-14', 0),
-(2, 1, 1, 2, 130000, 'inmueble2', 100, 2, 'a reformar', 'tercera', 0, 1, '2020-05-20', 0),
-(3, 2, 1, 3, 135000, 'inmueble3', 102, 1, 'obra nueva', 'primera', 1, 1, '2022-03-11', 1),
-(4, 4, 1, 4, 180000, 'inmueble4', 130, 2, 'obra nueva', 'segunda', 1, 1, '2022-04-01', 1),
-(5, 3, 1, 3, 183000, 'inmueble5', 128, 2, 'obra nueva', 'cuarto', 0, 1, '2022-02-14', 1),
-(6, 6, 1, 4, 167000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1);
+(1, 1, 1, 3, 190000, 'inmueble1', 120, 2, 'obra nueva', 'primera', 1, 1, '2021-03-14', 0,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
 
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(2, 1, 1, 2, 130000, 'inmueble2', 100, 2, 'a reformar', 'tercera', 0, 1, '2020-05-20', 0.'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(3, 2, 1, 3, 135000, 'inmueble3', 102, 1, 'obra nueva', 'primera', 1, 1, '2022-03-11', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(4, 4, 1, 4, 180000, 'inmueble4', 130, 2, 'obra nueva', 'segunda', 1, 1, '2022-04-01', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(5, 3, 1, 3, 183000, 'inmueble5', 128, 2, 'obra nueva', 'cuarto', 0, 1, '2022-02-14', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(6, 6, 1, 4, 167000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(7, 1, 2, 3, 290000, 'inmueble1', 220, 2, 'obra nueva', 'primera', 1, 1, '2021-03-14', 0,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(8, 5, 3, 2, 180000, 'inmueble2', 180, 2, 'a reformar', 'tercera', 0, 1, '2020-05-20', 0,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(9, 2, 4, 3, 190000, 'inmueble3', 122, 1, 'obra nueva', 'primera', 1, 1, '2022-03-11', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(10, 4, 2, 4, 130000, 'inmueble4', 140, 2, 'buen estado', 'segunda', 1, 1, '2022-04-01', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(11, 3, 3, 3, 103000, 'inmueble5', 128, 2, 'a reformar', 'cuarto', 0, 1, '2022-02-14', 0,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!'),
+(12, 6, 4, 4, 137000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1,'Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de Playa de los Alemanes en Zahara de los Atunes.
+
+La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.
+
+La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.
+
+¡Contácta con nosotros para una visita!');
 -- Insertamos perfiles en la BBDD
 INSERT INTO PERFILES VALUES
 (1, 'ROL_USER'),

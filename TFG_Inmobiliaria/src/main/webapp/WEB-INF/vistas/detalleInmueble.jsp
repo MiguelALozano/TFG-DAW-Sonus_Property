@@ -32,11 +32,8 @@
 	                	<img src="../../images/inmuebles/${inmueble.imagen}.jpg" alt="Vivienda">
 	                </div> 
                     <div>
-                        <h3>Descripción del Inmueble</h3><hr>
-                        <p>Bienvenidos a un estupendo ático con espectaculares vistas sobre el mar, situado en la exclusiva zona de 'Playa de los Alemanes' en Zahara de los Atunes.</p>
-                        <p>La propiedad está diseñada en 3 plantas. La planta inferior tiene un garaje de 50 m² con espacio para 2 coches y trastero. Desde aquí podemos acceder a la planta superior donde se encuentra la propiedad a través de ascensor o escaleras.</p>    
-                        <p>La planta superior consta de 3 dormitorios, 3 baños, oficina, gran salón y grandes ventanales desde los pisos hasta los techos, y una cocina abierta. La terraza es de 150 m² y tiene un jacuzzi.</p>    
-                        <p>¡Contácta con nosotros para una visita!</p>    
+                        <h3>Descripción del Inmueble</h3><hr>    
+                        <p>${inmueble.descripcion}</p>    
                     </div>
                     <div class="detalles">
                         <h3>Detalles del Inmueble<hr></h3><br>
@@ -63,13 +60,13 @@
 	                    <a href="https://www.google.com/maps/place/ESCUELA+TELEFONICA/@40.3833361,-3.6287205,19.95z/data=!4m13!1m7!3m6!1s0xd4225af7347dfc9:0x5087831a051c8a7c!2sC.+de+Bruno+Ab%C3%BAndez,+28031+Madrid!3b1!8m2!3d40.3834547!4d-3.6283768!3m4!1s0xd4225af1583175d:0xca4496d5b6b32cd6!8m2!3d40.3836392!4d-3.6289247" target="blank">
 	                    <img src="../../images/map.png"></a>
 	                </div>
-                <!-- nos pide loguear para ver mas info,  al volver atrás no manda a pantalla loguear 
+                 
                 </div>    
 	                <div class="btn-volver">
 	                		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
 	                </div>
             	</div>
-            	--> 
+            	 
         </section>
     </main>
 	

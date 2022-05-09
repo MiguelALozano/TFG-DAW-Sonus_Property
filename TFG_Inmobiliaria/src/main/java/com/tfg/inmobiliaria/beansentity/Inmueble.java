@@ -46,6 +46,8 @@ public class Inmueble implements Serializable {
 	private int tamanio;
 
 	private byte terraza;
+	
+	private String descripcion;
 
 	//uni-directional many-to-one association to Ciudad
 	@ManyToOne
@@ -63,7 +65,7 @@ public class Inmueble implements Serializable {
 
 	public Inmueble(int idInmueble, byte ascensor, int baños, String estado, Date fechaAlta, String imagen,
 			byte novedad, int numHabitaciones, String planta, BigDecimal precio, int tamanio, byte terraza,
-			Ciudad ciudad, Tipo tipo) {
+			String descripcion, Ciudad ciudad, Tipo tipo) {
 		super();
 		this.idInmueble = idInmueble;
 		this.ascensor = ascensor;
@@ -77,15 +79,19 @@ public class Inmueble implements Serializable {
 		this.precio = precio;
 		this.tamanio = tamanio;
 		this.terraza = terraza;
+		this.descripcion = descripcion;
 		this.ciudad = ciudad;
 		this.tipo = tipo;
 	}
+
+
 
 	//Getters y Setters
 	public int getIdInmueble() {
 		return this.idInmueble;
 	}
 
+	
 	public void setIdInmueble(int idInmueble) {
 		this.idInmueble = idInmueble;
 	}
@@ -193,6 +199,15 @@ public class Inmueble implements Serializable {
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
+	
+	
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
 	//equals y hasCode
 	@Override
@@ -216,14 +231,17 @@ public class Inmueble implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 	//toString
 	@Override
 	public String toString() {
 		return "Inmueble [idInmueble=" + idInmueble + ", ascensor=" + ascensor + ", baños=" + baños + ", estado="
 				+ estado + ", fechaAlta=" + fechaAlta + ", imagen=" + imagen + ", novedad=" + novedad
 				+ ", numHabitaciones=" + numHabitaciones + ", planta=" + planta + ", precio=" + precio + ", tamanio="
-				+ tamanio + ", terraza=" + terraza + ", ciudad=" + ciudad + ", tipo=" + tipo + "]";
+				+ tamanio + ", terraza=" + terraza + ", descripcion=" + descripcion + ", ciudad=" + ciudad + ", tipo="
+				+ tipo + "]";
 	}
+	
+	
 
 }
