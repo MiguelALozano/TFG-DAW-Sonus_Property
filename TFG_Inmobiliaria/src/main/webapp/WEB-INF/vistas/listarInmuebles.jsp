@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> 
 
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -37,7 +38,9 @@
 		                    <div><h4>${ele.tamanio} m2</h4></div>
 		                    <div><h5>${ele.precio} &euro;</h5></div>
 		                    <div><h4><a href="/inmueble/verInmueble/${ele.idInmueble}">Más información</a></h4></div>
-		                    <div><h4><a class="añadirFavoritos" data-idInmueble=${ele.idInmueble } href="#">Añadir a Favoritos</a></h4></div>
+		                    <sec:authorize access="hasAnyAuthority('ROL_USER','ROL_ADMON')">
+		                    	<div><h4><a class="añadirFavoritos" data-idInmueble=${ele.idInmueble } href="#">Añadir a Favoritos</a></h4></div>
+		                   </sec:authorize> 	
 		                </div>
 		            </article>
 	            </c:forEach> 

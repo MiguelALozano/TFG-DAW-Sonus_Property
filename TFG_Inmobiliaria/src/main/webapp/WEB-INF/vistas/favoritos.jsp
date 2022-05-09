@@ -31,7 +31,7 @@
 				<c:forEach var="ele" items="${listaFavoritos}">        
 		            <article class="contenedor-fichas">
 		                <div class="ficha">
-		                <div><a href="/inmueble/verInmueble/${ele.inmueble.idInmueble}"><img src="images/inmuebles/${ele.inmueble.imagen}.jpg" alt="Vivienda"></a></div>
+		                <div><a href="/inmueble/verInmueble/${ele.inmueble.idInmueble}"><img src="../../images/inmuebles/${ele.inmueble.imagen}.jpg" alt="Vivienda"></a></div>
 		                 <div><h4>${ele.inmueble.ciudad.nombre}</h4></div>   
 		                 <div><h3>${ele.inmueble.tipo.tipo}</h3></div>
 		                    <div><h4>${ele.inmueble.tamanio} m2</h4></div>
