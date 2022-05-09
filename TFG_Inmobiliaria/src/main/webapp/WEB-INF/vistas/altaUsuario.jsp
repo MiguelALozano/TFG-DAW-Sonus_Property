@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> 
 
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -38,8 +39,9 @@
 					<input type="password" id="password" name="passwordRepetido" placeholder="Repetir Password" class="cuadro-form alta"><br><br>
 					
 					<%-- La parte de añadir perfil de administrador solo sera visible para el administrador --%>
-					<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form"> Añadir perfil de administrador al usuario</label></h3>
-					
+					<sec:authorize access="hasAnyAuthority('ROL_USER','ROL_ADMON')">
+						<h3><label for="perfilAdmon"><input type="checkbox" id="perfilAdmon" name="perfilAdmon" value="true" class="cuadro-form"> Añadir perfil de administrador al usuario</label></h3>
+					</sec:authorize>
 					<input type="submit" value="Alta" class="cuadro-form btn-pq">
 					<input type="reset" value="Borrar" class="cuadro-form btn-pq">
 				</form>

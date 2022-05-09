@@ -34,6 +34,7 @@ public class ControladorRest {
 	@Autowired
 	private IntFavoritoDao favoritoRepo;
 	
+	
 	//SERVICIO REST PARA USUARIOS
 	
 	@GetMapping("/buscarUsuario/{username}")
@@ -76,7 +77,7 @@ public class ControladorRest {
 		System.out.println("usuario " + usuario);
 		Inmueble inmueble = inmuebleRepo.findById(favoritoDto.getIdInmuebleDTO());
 		System.out.println("Inmueble" + inmueble);
-		Favorito favorito = new Favorito(favoritoDto.getIdFavoritoDTO(), inmueble, usuario);
+		Favorito favorito = new Favorito(inmueble, usuario);
 		return favoritoRepo.añadirFavoritos(favorito) ?
 				new ResponseEntity<Favorito>(favorito, HttpStatus.OK):
 				new ResponseEntity<Favorito>(favorito,HttpStatus.BAD_REQUEST);

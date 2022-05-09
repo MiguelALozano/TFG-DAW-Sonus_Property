@@ -63,11 +63,13 @@
 	                    <a href="https://www.google.com/maps/place/ESCUELA+TELEFONICA/@40.3833361,-3.6287205,19.95z/data=!4m13!1m7!3m6!1s0xd4225af7347dfc9:0x5087831a051c8a7c!2sC.+de+Bruno+Ab%C3%BAndez,+28031+Madrid!3b1!8m2!3d40.3834547!4d-3.6283768!3m4!1s0xd4225af1583175d:0xca4496d5b6b32cd6!8m2!3d40.3836392!4d-3.6289247" target="blank">
 	                    <img src="../../images/map.png"></a>
 	                </div>
+                <!-- nos pide loguear para ver mas info,  al volver atrás no manda a pantalla loguear 
                 </div>    
 	                <div class="btn-volver">
 	                		<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
 	                </div>
-            </div> 
+            	</div>
+            	--> 
         </section>
     </main>
 	

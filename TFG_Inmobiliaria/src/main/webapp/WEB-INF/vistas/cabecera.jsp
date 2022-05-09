@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -34,9 +35,21 @@
             <li><a href="../../content/about.html">QUIÉNES SOMOS</a></li>
             <li><a href="../../content/contact.html">CONTACTO</a></li>
             <li><h4 id="usuario">${sessionUserName}</h4></li>
-            <li><h4><a href="/login">Inicia Sesión</a></h4></li>
-            <li><h4><a href="/admon/altaUsuario">Regístrate</a></h4></li>
-            <li><h4><a href="/logout">Cerrar Sesión</a></h4></li>
+            <sec:authorize access="!isAuthenticated()">
+            	<li><h4><a href="/login">Inicia Sesión</a></h4></li>
+            	<li><h4><a href="/admon/altaUsuario">Regístrate</a></h4></li>
+           	</sec:authorize>
+            <sec:authorize access="isAuthenticated()">
+            	<li><h4><a href="/user/verFavoritos/${sessionUserName}">Favoritos</a></h4></li>
+            </sec:authorize>
+            
+            <sec:authorize access="hasAuthority('ROL_ADMON')">
+            	<li><h4><a href="/admon/panelAdmon">Admin. panel</a></h4></li>
+            </sec:authorize>
+            
+            <sec:authorize access="isAuthenticated()">
+            	<li><h4><a href="/logout">Cerrar Sesión</a></h4></li>
+            </sec:authorize>
             <%-- La parte con su usuario correspondiente
             <li><h4>Bienvenido ${sesion.nombre  }</h4></li>
             <li><h4><a href="/logout">Cerrar Sesión</a></h4></li> --%>

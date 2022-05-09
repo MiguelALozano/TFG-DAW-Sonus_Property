@@ -88,7 +88,7 @@ public class AdmonController {
 		}
 		//doy de alta el usuario en la BBDD
 		if (usuarioDao.altaUsuario(usuario))
-				return "redirect:/inicio";
+				return "redirect:/";
 		else {
 			model.addAttribute("mensaje", "Ya existe un usuario con ese Username");
 			return "/altaUsuario";

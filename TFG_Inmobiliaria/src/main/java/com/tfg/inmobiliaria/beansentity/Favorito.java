@@ -39,6 +39,12 @@ public class Favorito implements Serializable {
 		this.inmueble = inmueble;
 		this.usuario = usuario;
 	}
+	public Favorito(Inmueble inmueble, Usuario usuario) {
+		super();
+		
+		this.inmueble = inmueble;
+		this.usuario = usuario;
+	}
 
 	//Getters y Setters
 	public int getIdFavoritos() {

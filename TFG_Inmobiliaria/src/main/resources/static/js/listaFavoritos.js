@@ -8,12 +8,14 @@ const añadirFavoritos = document.querySelectorAll(".añadirFavoritos").forEach(
 	item.addEventListener('click', event => {
 		event.preventDefault();
 	incluirInmueble = true;
+	listaFavoritosCreada =false; //controlo que se ha terminado la peticion al RESTcontroler y tengo una lista de favoritos recuperada  de la BBDD
 	username = usuario.textContent;
 	idInmueble = item.dataset.idinmueble;
 	
+	
 	console.log('entro al js de añadir favoritos');
-	console.log('usuario '+ username);
-	console.log('idInmueble ' + idInmueble);
+	console.log('usuario de sesion: '+ username);
+	console.log('idInmueble del inmueble clickado en añadir favoritos: ' + idInmueble);
 	
 	
 	fetch(`http://localhost:4000/rest/inmobiliaria/buscarFavoritosUsuario/${usuario.textContent}`, {
@@ -25,59 +27,32 @@ const añadirFavoritos = document.querySelectorAll(".añadirFavoritos").forEach(
 				
 				return response.json();
 			}else{
-				
+				fetch('http://localhost:4000/rest/inmobiliaria/añadirInmuebleFavorito/', {
+				method: 'PUT',
+				body: JSON.stringify({
+					idInmuebleDTO : idInmueble,
+					usernameDTO : username,
+					idFavoritoDTO : idFavorito
+				}),
+			headers: {'Content-type': 'application/json'}
+			})
 				throw new Error(response.status);
 			}	
 		})
 		.then(UsuarioJson => {
-			//console.log(UsuarioJson);
-			//console.log('======');
 			listaFavoritos = UsuarioJson;
-			console.log('Lista de Favoritos');	
+			console.log('Lista de Favoritos del usuario');	
 			console.log(listaFavoritos);
-			idFavorito = listaFavoritos.length + 1;
+			idFavorito = 1;
 			console.log('IdFavorito que paso ' + idFavorito);
-			
-		})
-		.catch(error => {
-			console.error("Error: ", error.message);
-		});
-		
-		
-		fetch(`http://localhost:4000/rest/inmobiliaria/buscarInmueble/${idInmueble}`, {
-		method:'GET',
-		headers: {'Content-type': 'application/json'}
-		})
-		.then(response =>{
-			if(response.status == 200){
-				//alert('El inmueble existe');
-				
-				return response.json();
-			}else{
-				
-				throw new Error(response.status);
-			}	
-		})
-		.then(UsuarioJson => {
-			console.log('respuesta del otro fecth');
-			console.log('Inmueble clickado');
-			console.log(UsuarioJson);
-			
-			
-		})
-		.catch(error => {
-			console.error("Error: ", error.message);
-		});
-		
-		for(ele of listaFavoritos){
+			for(ele of listaFavoritos){
 				console.log('idInmuebles favoritos ' + ele.inmueble.idInmueble);
 				if(ele.inmueble.idInmueble == idInmueble){
 					incluirInmueble = false;
 				}	
-		}
-		console.log('¿debo incluir el inmueble? ' + incluirInmueble);
-		
-		if(incluirInmueble == true){
+			}
+			if(incluirInmueble == true){
+			console.log('Entro a fetch para añadir inmueble');
 			fetch('http://localhost:4000/rest/inmobiliaria/añadirInmuebleFavorito/', {
 				method: 'PUT',
 				body: JSON.stringify({
@@ -88,11 +63,16 @@ const añadirFavoritos = document.querySelectorAll(".añadirFavoritos").forEach(
 			headers: {'Content-type': 'application/json'}
 			})
 		}
+			
+		})
+		.catch(error => {
+			console.error("Error: ", error.message);
+		});
 		
-	
+		
+		
+		
 	});
 	
-	
-
 });
 

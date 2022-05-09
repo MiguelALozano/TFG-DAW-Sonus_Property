@@ -25,13 +25,7 @@ public class FavoritoDaoImpl implements IntFavoritoDao{
 
 	@Override
 	public boolean añadirFavoritos(Favorito favorito) {
-	//String username = favorito.getUsuario().getUsername();
-	//List<Favorito> listaFavoritos = favoritoRepo.findByUsuarioUsername(username);
-	//if (listaFavoritos == null)
-	//	listaFavoritos = new ArrayList<Favorito>();
-	//
-	//listaFavoritos.add(favorito);
-	System.out.println("Favorito en FavoritoDaoImpl" + favorito);
+	
 	favoritoRepo.save(favorito);
 	
 	//mirar el return tengo que comprobar si se aáde bien o no

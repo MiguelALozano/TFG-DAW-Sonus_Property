@@ -22,13 +22,7 @@ INSERT INTO INMUEBLES VALUES
 (3, 2, 1, 3, 135000, 'inmueble3', 102, 1, 'obra nueva', 'primera', 1, 1, '2022-03-11', 1),
 (4, 4, 1, 4, 180000, 'inmueble4', 130, 2, 'obra nueva', 'segunda', 1, 1, '2022-04-01', 1),
 (5, 3, 1, 3, 183000, 'inmueble5', 128, 2, 'obra nueva', 'cuarto', 0, 1, '2022-02-14', 1),
-(6, 6, 1, 4, 167000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1),
-(7, 1, 2, 3, 290000, 'inmueble1', 220, 2, 'obra nueva', 'primera', 1, 1, '2021-03-14', 0),
-(8, 5, 3, 2, 180000, 'inmueble2', 180, 2, 'a reformar', 'tercera', 0, 1, '2020-05-20', 0),
-(9, 2, 4, 3, 190000, 'inmueble3', 122, 1, 'obra nueva', 'primera', 1, 1, '2022-03-11', 1),
-(10, 4, 2, 4, 130000, 'inmueble4', 140, 2, 'buen estado', 'segunda', 1, 1, '2022-04-01', 1),
-(11, 3, 3, 3, 103000, 'inmueble5', 128, 2, 'a reformar', 'cuarto', 0, 1, '2022-02-14', 0),
-(12, 6, 4, 4, 137000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1);
+(6, 6, 1, 4, 167000, 'inmueble6', 144, 2, 'obra nueva', 'primera', 1, 1, '2022-02-21', 1);
 
 -- Insertamos perfiles en la BBDD
 INSERT INTO PERFILES VALUES
@@ -47,7 +41,7 @@ INSERT INTO USUARIO_PERFILES VALUES
 ('RaúlRSanz', 2),
 ('LauraSAlba', 1);
 
--- Insertamos favoritos en un usuario
+-- Insertamos favoritos para el usuario cc
 INSERT INTO FAVORITOS VALUES
 (1,1,"LauraSAlba"),
 (2,4,"LauraSAlba"),

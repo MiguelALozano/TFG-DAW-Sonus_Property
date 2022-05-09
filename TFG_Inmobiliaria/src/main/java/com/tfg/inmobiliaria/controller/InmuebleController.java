@@ -47,7 +47,7 @@ public class InmuebleController {
 			model.addAttribute("listaInmuebles", inmuebleDao.findByTipoTipo(tipoInmueble));
 		}else {
 			rattr.addFlashAttribute("mensaje", "Seleccione al menos un criterio de busqueda");
-			return "redirect:/inicio";
+			return "redirect:/";
 		}
 		return "mostrarBusquedaInmuebles";
 	}
