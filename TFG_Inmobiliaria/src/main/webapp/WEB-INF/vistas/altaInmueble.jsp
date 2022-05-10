@@ -78,7 +78,8 @@
 					<br>
 					
 					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
-					
+					<label for="descripcion">Descripción</label><br>
+					<textarea id="descripcion" name="descripcion" rows="10" cols="60"></textarea><br>
 					<label for="tipoInmueble">Tipo de Inmueble</label><br>
 						<select name="idTipo" id="tipoInmueble" class="cuadro-form alta">
 							<c:forEach var="ele" items="${listaTipos}">
