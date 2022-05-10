@@ -33,8 +33,7 @@
                     <a href="/admon/altaUsuario"><button id="botonBuscarUsuario" class="cuadro-form admon">Crear usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="cuadro-form admon">Modificar/Eliminar usuario</button></a>
                     <a href="/admon/modificarUsuario"><button id="botonVerTodosUsuario" class="cuadro-form admon">Ver usuario</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los usuarios</button></a>
-                    <a href="/admon/modificarUsuario"><button id="botonVerFavoritoUsuario" class="cuadro-form admon">Ver favoritos del usuario</button></a>
+                    <a href="/admon/verUsuarios"><button id="botonVerUnUsuario" class="cuadro-form admon">Ver todos los usuarios</button></a>
                 </div><br><br>
                 
 	            <h2>Selecciona que operación quieres realizar con INMUEBLES</h2>

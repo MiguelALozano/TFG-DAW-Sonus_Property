@@ -129,4 +129,10 @@ public class AdmonController {
 		model.addAttribute("listaTipos", tipoDao.findAll());
 		return "modificarInmueble";
 	}
+	
+	@GetMapping("/verUsuarios")
+	public String procesarVerUsuarios(Model model) {
+		model.addAttribute("listaUsuarios", usuarioDao.findAll());
+		return "verUsuarios";
+	}
 }
