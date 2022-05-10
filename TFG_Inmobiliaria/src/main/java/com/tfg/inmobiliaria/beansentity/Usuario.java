@@ -47,6 +47,10 @@ public class Usuario implements Serializable {
 			}
 		)
 	private List<Perfil> perfiles;
+	
+	//bi-directional many-to-one association to Favorito
+		@OneToMany(mappedBy="usuario", cascade={CascadeType.ALL})
+		private List<Favorito> favoritos;
 
 	//Constructores
 	public Usuario() {

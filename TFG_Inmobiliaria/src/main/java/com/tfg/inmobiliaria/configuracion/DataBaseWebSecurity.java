@@ -39,6 +39,7 @@ public class DataBaseWebSecurity extends WebSecurityConfigurerAdapter{
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
 			http.csrf().disable()
+			.logout().logoutSuccessUrl("/").and()
 			.authorizeRequests()
 			 //Los recursos estaticos no requieren autenticacion
 					.antMatchers("/bootstrap/**","/content/**","/images/**", "/css/**", "js/**").permitAll()
