@@ -29,7 +29,7 @@
                 <h1>Detalles del Inmueble</h1><br>
                 <div class="contenedorDetalles">
 	                <div class="imagenDetalles">
-	                	<img src="../../images/inmuebles/${inmueble.imagen}.jpg" alt="Vivienda">
+	                		<img src="../../images/inmuebles/${inmueble.imagen}.jpg" alt="Vivienda">
 	                </div> 
                     <div>
                         <h3>Descripción del Inmueble</h3><hr>    
