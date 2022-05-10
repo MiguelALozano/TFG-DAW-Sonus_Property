@@ -46,6 +46,7 @@ botonBuscarInmueble.addEventListener('click', function(event){
 			tamanio.value = UsuarioJson.tamanio;
 			terraza.value = UsuarioJson.terraza;
 			tipoInmueble.value = UsuarioJson.tipo.idTipo;
+			descripcion.value = UsuarioJson.descripcion;
 			
 		})
 		.catch(error => {
@@ -81,6 +82,7 @@ botonModificarInmueble.addEventListener('click', function(event){
 			precio : precio.value,
 			tamanio : tamanio.value,
 			terraza : terraza.value,
+			descripcion : descripcion.value,
 			tipo : {
 				idTipo: tipoInmueble.value,
 			}
