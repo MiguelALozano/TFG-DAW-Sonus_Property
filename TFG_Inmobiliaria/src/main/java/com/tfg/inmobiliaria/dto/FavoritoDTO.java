@@ -5,9 +5,9 @@ public class FavoritoDTO {
 	private String usernameDTO;
 	private int idInmuebleDTO;
 	private int idFavoritoDTO;
+	
 	public FavoritoDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public FavoritoDTO(String usernameDTO, int idInmuebleDTO, int idFavoritoDTO) {
 		super();

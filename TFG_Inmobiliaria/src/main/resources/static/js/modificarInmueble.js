@@ -4,8 +4,6 @@
 botonBuscarInmueble.addEventListener('click', function(event){
 	event.preventDefault();
 	
-	console.log('entro al buscar inmueble');
-	
 	fetch(`http://localhost:4000/rest/inmobiliaria/buscarInmueble/${idInmueble.value}`, {
 		method:'GET',
 		headers: {'Content-type': 'application/json'}
@@ -29,7 +27,6 @@ botonBuscarInmueble.addEventListener('click', function(event){
 			}	
 		})
 		.then(UsuarioJson => {
-			console.log(UsuarioJson);
 			ciudad.value = UsuarioJson.ciudad.idCiudad;
 			fechaAlta.value = UsuarioJson.fechaAlta;
 			if(UsuarioJson.ascensor == 1)
@@ -63,7 +60,6 @@ botonModificarInmueble.addEventListener('click', function(event){
 		tieneAscensor = 1;
 	else if(ascensorNo.checked == true)
 		tieneAscensor = 0;
-	console.log('valor de ciudad en modificar ' + ciudad.value);
 	fetch('http://localhost:4000/rest/inmobiliaria/modificarInmueble', {
 		method: 'PUT',
 		body: JSON.stringify({
@@ -95,7 +91,6 @@ botonModificarInmueble.addEventListener('click', function(event){
 //Borrar Inmueble
 botonBorrarInmueble.addEventListener('click', function(event){
 	event.preventDefault();
-	console.log('entro a borrar inmueble');
 	fetch(`http://localhost:4000/rest/inmobiliaria/borrarInmueble/${idInmueble.value}`, {
 		method:'DELETE',
 		headers: {'Content-type': 'application/json'}

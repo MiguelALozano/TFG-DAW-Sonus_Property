@@ -1,13 +1,11 @@
 package com.tfg.inmobiliaria.modelo.dao.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tfg.inmobiliaria.beansentity.Favorito;
-import com.tfg.inmobiliaria.beansentity.Inmueble;
 import com.tfg.inmobiliaria.modelo.dao.IntFavoritoDao;
 import com.tfg.inmobiliaria.modelo.repository.IntFavoritoRepository;
 

@@ -1,8 +1,5 @@
 package com.tfg.inmobiliaria.controller;
 
-
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +14,11 @@ import com.tfg.inmobiliaria.modelo.dao.IntCiudadDao;
 import com.tfg.inmobiliaria.modelo.dao.IntInmuebleDao;
 import com.tfg.inmobiliaria.modelo.dao.IntTipoDao;
 
-
-
 @Controller
 public class HomeController {
 
 	@Autowired
 	private IntInmuebleDao inmuebleDao;
-	
 	
 	@Autowired
 	private IntCiudadDao ciudadDao;
@@ -39,8 +33,6 @@ public class HomeController {
 		model.addAttribute("listaTipos", tipoDao.findAll());
 		if(aut != null) {
 			miSession.setAttribute("sessionUserName", aut.getName());
-			System.out.println("entro al if");
-			System.out.println(miSession.getAttribute("sessionUserName"));
 		}
 		return "inicio";
 	}

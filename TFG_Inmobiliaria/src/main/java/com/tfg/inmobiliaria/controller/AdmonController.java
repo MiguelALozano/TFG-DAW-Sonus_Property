@@ -78,10 +78,9 @@ public class AdmonController {
 			return "/altaUsuario";
 		}
 		usuario.setPassword("{noop}" + usuario.getPassword());
-		System.out.println("passwordBBDD: "+usuario.getPassword());
+		
 		//si se selecciona el checkbox para añadir perfil de administrador le damos
 		//tambien ese perfil al usuario que estamos creando 
-		
 		if(perfilAdmon) {
 			perfiles.add(perfilDao.findById(2));
 			usuario.setPerfiles(perfiles);
@@ -98,7 +97,6 @@ public class AdmonController {
 	@GetMapping("/altaInmueble")
 	public String procesarAltaInmueble(Model model) {
 		model.addAttribute("listaCiudades", ciudadDao.findAll());
-		System.out.println(ciudadDao.findAll());
 		model.addAttribute("listaTipos", tipoDao.findAll());
 		return "altaInmueble";
 	}
@@ -113,7 +111,6 @@ public class AdmonController {
 		inmueble.setTipo(tipo);
 		inmueble.setFechaAlta(new Date());
 		//falta la imagen
-		System.out.println(inmueble);
 		if (inmuebleDao.altaInmueble(inmueble)) {
 			rattr.addFlashAttribute("mensaje", "Inmueble dado de alta");
 			return "redirect:/admon/altaInmueble";

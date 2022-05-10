@@ -71,18 +71,12 @@ public class ControladorRest {
 	
 	@PutMapping("/añadirInmuebleFavorito")
 	public ResponseEntity<Favorito> procesarAñadirInmuebleFavorito(@RequestBody FavoritoDTO favoritoDto){
-		System.out.println("entro a añadirInmuebleFavorito");
-		System.out.println("FavoritoDTO" + favoritoDto);
 		Usuario usuario = usuarioRepo.findById(favoritoDto.getUsernameDTO());
-		System.out.println("usuario " + usuario);
 		Inmueble inmueble = inmuebleRepo.findById(favoritoDto.getIdInmuebleDTO());
-		System.out.println("Inmueble" + inmueble);
 		Favorito favorito = new Favorito(inmueble, usuario);
 		return favoritoRepo.añadirFavoritos(favorito) ?
 				new ResponseEntity<Favorito>(favorito, HttpStatus.OK):
 				new ResponseEntity<Favorito>(favorito,HttpStatus.BAD_REQUEST);
-	//public String prueba() {	
-	//	return "prueba";
 	} 
 		
 
@@ -111,6 +105,5 @@ public class ControladorRest {
 			new ResponseEntity<Inmueble>(inmueble, HttpStatus.OK):
 			new ResponseEntity<Inmueble>(inmueble, HttpStatus.NOT_FOUND);
 	}
-	
 	
 }

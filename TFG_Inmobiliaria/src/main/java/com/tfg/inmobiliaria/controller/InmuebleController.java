@@ -1,6 +1,5 @@
 package com.tfg.inmobiliaria.controller;
 
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,21 +25,15 @@ public class InmuebleController {
 	@GetMapping("/verInmueble/{idInmueble}")
 	public String verInmueble(Model model, @PathVariable ("idInmueble") int idInmueble) {
 		model.addAttribute("inmueble", inmuebleDao.findById(idInmueble));
-		System.out.println(inmuebleDao.findById(idInmueble));
 		return "detalleInmueble";
 	}
 	
 	@PostMapping("/buscarInmuebles")
 	public String procesarBuscarInmuebles(RedirectAttributes rattr,Model model,@RequestParam ("ciudad") String ciudad, @RequestParam ("tipo") String tipoInmueble ) {
-		System.out.println("ciudad recogida " + ciudad);
 		if(!ciudad.equals("") && !tipoInmueble.equals("")) {
 			model.addAttribute("listaInmuebles", inmuebleDao.findByCiudadNombreAndTipoTipo(ciudad, tipoInmueble));
-			System.out.println("ciudad y tipo : " + inmuebleDao.findByCiudadNombreAndTipoTipo(ciudad, tipoInmueble));
-		}
-			
-		else if (!ciudad.equals("") && tipoInmueble.equals("")) {
+		}else if (!ciudad.equals("") && tipoInmueble.equals("")) {
 			model.addAttribute("listaInmuebles", inmuebleDao.findByCiudadNombre(ciudad));
-			System.out.println("Ciudad:" + inmuebleDao.findByCiudadNombre(ciudad));
 		}
 			
 		else if(ciudad.equals("") && !tipoInmueble.equals("")) {
@@ -55,7 +48,6 @@ public class InmuebleController {
 	@GetMapping("/verTodos")
 	public String verTodos(Model model, HttpSession miSession) {
 		model.addAttribute("listaInmuebles", inmuebleDao.findAll());
-		System.out.println("veo todos");
 		return "listarInmuebles";
 	}
 	

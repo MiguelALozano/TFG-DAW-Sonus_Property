@@ -4,7 +4,6 @@ let perfilesUser = [];
 //Buscar Usuario
 botonBuscarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
-	console.log('entro al buscar usuario');
 	
 	fetch(`http://localhost:4000/rest/inmobiliaria/buscarUsuario/${username.value}`, {
 		method:'GET',
@@ -36,7 +35,6 @@ botonBuscarUsuario.addEventListener('click', function(event){
 			enabled.value = UsuarioJson.enabled;
 			
 			for(ele of UsuarioJson.perfiles){
-				console.log(ele.descripcion);
 				if (ele.descripcion == 'ROL_USER')
 					perfilUser.checked = true;
 				else if (ele.descripcion == 'ROL_ADMON')
@@ -56,16 +54,11 @@ botonModificarUsuario.addEventListener('click', function(event){
 	event.preventDefault();
 	//vacio array de perfilesUser
 	perfilesUser = [];
-	//console.log('perfiles al inicio' + perfilesUser);
 	if(perfilUser.checked == true ){
-		console.log('checkbox de usuario esta seleccionado');
 		perfilesUser.push({"idPerfil":1, "descripcion":"ROL_USER"});
-		console.log(perfilesUser);
 	}
 	if(perfilAdmon.checked == true){
-		console.log('checkbox de admon esta seleccionado');
 		perfilesUser.push({"idPerfil":2, "descripcion":"ROL_ADMON"});
-		console.log(perfilesUser);
 	}
 	
 	fetch('http://localhost:4000/rest/inmobiliaria/modificarUsuario', {
