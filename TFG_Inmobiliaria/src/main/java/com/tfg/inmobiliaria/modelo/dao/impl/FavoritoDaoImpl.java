@@ -25,13 +25,21 @@ public class FavoritoDaoImpl implements IntFavoritoDao{
 
 	@Override
 	public boolean añadirFavoritos(Favorito favorito) {
-	
-	favoritoRepo.save(favorito);
-	
-	//mirar el return tengo que comprobar si se aáde bien o no
-	return true;
-		
+		favoritoRepo.save(favorito);
+		return true;	
 	}
 
-	
+	@Override
+	public boolean borraFavorito(int idFavorito) {
+		if (findById(idFavorito) != null) {
+			favoritoRepo.delete(findById(idFavorito));
+			return true;
+		}else
+			return false;
+	}
+
+	@Override
+	public Favorito findById(int idFavorito) {
+		return favoritoRepo.findById(idFavorito).orElse(null);
+	}
 }

@@ -3,6 +3,7 @@ package com.tfg.inmobiliaria.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +42,13 @@ public class UserController {
 		}else {
 			model.addAttribute("mensaje", "Aún no has guardado ningún inmueble en favoritos");
 			return "favoritos";
-		}
-			
+		}		
 	}
+	
+	@GetMapping("/eliminarFavorito/{idFavoritos}")
+	public String procesarEliminarFavorito(@PathVariable ("idFavoritos") int idFavoritos) {
+		favoritoRepo.borraFavorito(idFavoritos);
+		return "redirect:/";
+	}
+	
 }

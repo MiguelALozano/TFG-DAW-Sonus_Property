@@ -37,7 +37,8 @@
 		                 <div><h3>${ele.inmueble.tipo.tipo}</h3></div>
 		                    <div><h4>${ele.inmueble.tamanio} m²</h4></div>
 		                    <div><h5>${ele.inmueble.precio} &euro;</h5></div>
-		                    <div><h4><a href="/inmueble/verInmueble/${ele.inmueble.idInmueble}">Más información</a></h4></div>     
+		                    <div><h4><a href="/inmueble/verInmueble/${ele.inmueble.idInmueble}">Más información</a></h4></div>
+		                    <div><h4><a href="/user/eliminarFavorito/${ele.idFavoritos}">Eliminar de favoritos</a></h4></div>     
 		                </div>
 		            </article>
 	            </c:forEach> 
