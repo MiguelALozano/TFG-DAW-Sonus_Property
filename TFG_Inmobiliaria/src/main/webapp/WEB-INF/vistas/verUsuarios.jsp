@@ -32,7 +32,7 @@
 						<div class="contenedorDetallesUsuario">
 							<section class="picture">
 								<div class="imagenDetallesUsuario">
-				                	<img src="../images/avatar.png" alt="Foto Usuario">
+				                	<img src="../../images/avatar.png" alt="Foto Usuario">
 				                </div>					
 							</section>
 							<section class="data1">
