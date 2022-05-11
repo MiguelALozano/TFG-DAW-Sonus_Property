@@ -9,9 +9,9 @@
     <meta charset="UTF-8"> <!-- etiqueta meta para especificarle al navegador que codificación de carácteres vamos a utilizar, en nuestro caso UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/fichaUsuario.css">
     <link rel="stylesheet" type="text/css" href="../../css/styles.css"><!-- enlace que hacemos a la hoja de estilos independiente que define esta página -->
     <link rel="stylesheet" type="text/css" href="../../css/detalles.css">    
-    <link rel="stylesheet" type="text/css" href="../../css/fichaUsuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- definición de los textos -->
@@ -27,50 +27,39 @@
 		<section class="seccionFichaUsuario">
 			<div>
 				<h1>Fichas de usuarios</h1><br>
-				<div class="contenedorDetallesUsuario">
-					<div class="imagenDetallesUsuario">
-	                		<img src="../images/avatar-migue.png" alt="Foto Usuario">
-	                </div>
-	                <div><h3>PRUEBA</h3></div>
-				
-			
-			
-			
-			
-			
-				</div>
+				<section class="contenedorFichasUSuario">
+					<c:forEach var="ele" items="${listaUsuarios}">
+						<div class="contenedorDetallesUsuario">
+							<section class="picture">
+								<div class="imagenDetallesUsuario">
+				                	<img src="../images/avatar.png" alt="Foto Usuario">
+				                </div>					
+							</section>
+							<section class="data1">
+								<div><p>Username: <span>${ele.username}</span></p></div> 
+								<div><p>Nombre: <span>${ele.nombre}</span></p></div>
+						        <div><p>Apellido: <span>${ele.apellido}</span></p></div>
+						        <div><p>Email: <span>${ele.email}</span></p></div>
+							</section>
+							<section class="data2">
+								<div><p>Dirección: <span>${ele.direccion}</span></div>
+						        <div><p>Perfil:
+							        <c:forEach var="ele" items="${ele.perfiles}">
+							        	<span>${ele.descripcion}</span>
+							         </c:forEach>
+						        </div>						
+							</section>
+							<section class="button">
+								<div>
+									<a href="/admon/modificarUsuario"><button id="botonModificarUsuario" class="botonUsuario">Modificar/Eliminar usuario</button></a>
+								</div>
+							</section>
+						</div>
+					</c:forEach>
+				</section>
 			</div>
-		
-		
-		
 			<div class="btn-volver">
 				<input type="button" onclick="history.back()" name="volver atrás" value="VOLVER ATRÁS" class="cuadro-form admon">
-			</div>
-		</section>
-		
-		
-		
-		
-		
-		
-		<section class="seccionFichaUsuario">
-			<div class="seccion-fichasUsuario">
-				<c:forEach var="ele" items="${listaUsuarios}">        
-					<article class="contenedor-fichasUsuario">
-				    	<div class="fichaUsuario">
-					        <div><h3>Username: ${ele.username}</h3></div>   
-					        <div><h3>Nombre: ${ele.nombre}</h3></div>
-					        <div><h3>Apellido: ${ele.apellido}</h3></div>
-					        <div><h3>Email: ${ele.email}</h3></div>     
-					        <div><h3>Dirección: ${ele.direccion}</h3></div>
-					        <div><h3>Perfil:
-						        <c:forEach var="ele" items="${ele.perfiles}">
-						        	<div><h3>${ele.descripcion}</h3></div>
-						         </c:forEach>
-					         </h3></div>
-				         </div>
-					</article>
-				</c:forEach> 
 			</div>
 		</section>
 	</main>

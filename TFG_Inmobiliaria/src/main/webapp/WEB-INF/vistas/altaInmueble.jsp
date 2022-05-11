@@ -69,6 +69,7 @@
 					<input type="number" id="precio" name="precio" placeholder="Precio del inmueble" class="cuadro-form alta" required><br>	
 					
 					<label for="tamanio">Tamaño de inmueble</label><br>
+					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
 					
 					<label for="terraza">Terraza</label><br>
 						<select name="terraza" id="terraza" class="cuadro-form alta">
@@ -77,9 +78,6 @@
 						</select>
 					<br>
 					
-					<input type="number" id="tamanio" name="tamanio" placeholder="Tamaño del inmueble" class="cuadro-form alta" required><br>
-					<label for="descripcion">Descripción</label><br>
-					<textarea id="descripcion" name="descripcion" rows="10" cols="60"></textarea><br>
 					<label for="tipoInmueble">Tipo de Inmueble</label><br>
 						<select name="idTipo" id="tipoInmueble" class="cuadro-form alta">
 							<c:forEach var="ele" items="${listaTipos}">
@@ -87,6 +85,10 @@
 							</c:forEach>
 						</select>
 					<br>
+						
+					<label for="descripcion">Descripción</label><br>
+					<textarea id="descripcion" name="descripcion" rows="10" cols="60" class="cuadro-form desc"></textarea><br>
+					
 					
 					<input type="submit" value="Alta" class="cuadro-form">
 					<input type="reset" value="Borrar" class="cuadro-form">
