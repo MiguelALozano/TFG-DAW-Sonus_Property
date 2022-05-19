@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html><!-- definimos el lenguaje que vamos a utilizar, en nuesto caso html5 -->
 <html lang="es"> <!-- con esta etiqueta indicamos el idioma de la web -->
@@ -56,6 +57,9 @@
                         <p>Ciudad: <span>${inmueble.ciudad.nombre}</span></p>
                         <p>Tipo de inmueble: <span>${inmueble.tipo.tipo}</span></p>
                     </div>
+                    <sec:authorize access="hasAuthority('ROL_ADMON')">
+		                    		<p>Id del inmueble: ${inmueble.idInmueble}</p>
+		            </sec:authorize>
 	                <div class="map">
 	                    <a href="https://www.google.com/maps/place/ESCUELA+TELEFONICA/@40.3833361,-3.6287205,19.95z/data=!4m13!1m7!3m6!1s0xd4225af7347dfc9:0x5087831a051c8a7c!2sC.+de+Bruno+Ab%C3%BAndez,+28031+Madrid!3b1!8m2!3d40.3834547!4d-3.6283768!3m4!1s0xd4225af1583175d:0xca4496d5b6b32cd6!8m2!3d40.3836392!4d-3.6289247" target="blank">
 	                    <img src="../../images/map.png"></a>

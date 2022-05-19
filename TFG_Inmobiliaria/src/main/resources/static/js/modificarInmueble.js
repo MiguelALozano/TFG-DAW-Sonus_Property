@@ -26,24 +26,24 @@ botonBuscarInmueble.addEventListener('click', function(event){
 				throw new Error(response.status);
 			}	
 		})
-		.then(UsuarioJson => {
-			ciudad.value = UsuarioJson.ciudad.idCiudad;
-			fechaAlta.value = UsuarioJson.fechaAlta;
-			if(UsuarioJson.ascensor == 1)
+		.then(InmuebleJson => {
+			ciudad.value = InmuebleJson.ciudad.idCiudad;
+			fechaAlta.value = InmuebleJson.fechaAlta;
+			if(InmuebleJson.ascensor == 1)
 				ascensorSi.checked = true;
 			else
 				ascensorNo.checked = true;
-			baños.value = UsuarioJson.baños;	
-			estado.value = UsuarioJson.estado;
-			imagen.value = UsuarioJson.imagen;
-			novedad.value = UsuarioJson.novedad;
-			numHabitaciones.value = UsuarioJson.numHabitaciones;
-			planta.value = UsuarioJson.planta;
-			precio.value = UsuarioJson.precio;
-			tamanio.value = UsuarioJson.tamanio;
-			terraza.value = UsuarioJson.terraza;
-			tipoInmueble.value = UsuarioJson.tipo.idTipo;
-			descripcion.value = UsuarioJson.descripcion;
+			baños.value = InmuebleJson.baños;	
+			estado.value = InmuebleJson.estado;
+			imagen.value = InmuebleJson.imagen;
+			novedad.value = InmuebleJson.novedad;
+			numHabitaciones.value = InmuebleJson.numHabitaciones;
+			planta.value = InmuebleJson.planta;
+			precio.value = InmuebleJson.precio;
+			tamanio.value = InmuebleJson.tamanio;
+			terraza.value = InmuebleJson.terraza;
+			tipoInmueble.value = InmuebleJson.tipo.idTipo;
+			descripcion.value = InmuebleJson.descripcion;
 			
 		})
 		.catch(error => {

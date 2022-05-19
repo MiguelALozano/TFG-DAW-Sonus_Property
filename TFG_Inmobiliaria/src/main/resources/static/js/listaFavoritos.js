@@ -31,8 +31,8 @@ const añadirFavoritos = document.querySelectorAll(".añadirFavoritos").forEach(
 				throw new Error(response.status);
 			}	
 		})
-		.then(UsuarioJson => {
-			listaFavoritos = UsuarioJson;
+		.then(ListaInmueblesJson => {
+			listaFavoritos = ListaInmueblesJson;
 			idFavorito = 1;
 			for(ele of listaFavoritos){
 				if(ele.inmueble.idInmueble == idInmueble){
