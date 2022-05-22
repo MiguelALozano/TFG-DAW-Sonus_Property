@@ -90,4 +90,34 @@ footer {
                             "cookies"
                             "copyright";
     }
+    
+    .redes{
+    margin-bottom: 1rem;
+    }
+    
+    .cookies ul {
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
 }
+    
+    .copyright{
+    margin: 1rem auto 1rem auto;
+    padding-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
