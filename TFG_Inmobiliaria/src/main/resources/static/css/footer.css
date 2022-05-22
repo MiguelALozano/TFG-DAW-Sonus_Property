@@ -84,7 +84,7 @@ footer {
     opacity: 0.6;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 769px) {
     footer{
         grid-template-areas: "redes"
                             "cookies"
@@ -95,15 +95,19 @@ footer {
     margin-bottom: 1rem;
     }
     
+    .cookies{
+    font-size: 1.3rem;
+	}
     .cookies ul {
-    display: flex;
-    flex-direction: columns;
+    display: block;
+    flex-direction: column;
     justify-content: center;
-}
+	}
     
     .copyright{
     margin: 1rem auto 1rem auto;
     padding-bottom: 2rem;
+    font-size: 1.3rem;
     }
 }
 

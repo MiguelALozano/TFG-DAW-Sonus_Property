@@ -24,7 +24,7 @@ html {
 body {
     margin: 0;
     margin-bottom: 5rem;
-    min-width: 400px;
+    min-width: 375px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,6 @@ body {
     font-size: 16px;
     background-color: var(--color-principal);
 }
-
 
 h1{
     font-size: 2rem;
@@ -93,7 +92,7 @@ main{
 }
 
 .btn-pq{
-	width: 4.5%;
+	width: 10%;
     padding: 0.5rem;
     margin: 0.5rem;
     text-align: center;
@@ -212,6 +211,8 @@ main{
 /* ********************* ALTA ****************** */
 
 .seccion-alta {
+	max-width: 900px;
+	margin:auto;
     padding-top: 4rem;
     padding-bottom: 3rem;
     text-align: center;
@@ -219,7 +220,7 @@ main{
 }
 
 .alta{ 
-	width: 10%;
+	width: 30%;
     padding: 0.5rem;
     margin: 0.3rem auto 1.5rem auto;
     border: 0px solid white;
@@ -340,7 +341,33 @@ input[type=text]:focus,
     opacity: 1;
 }
 
+@media screen and (min-width: 1200px) {
+    .contenedorAbout,
+    .contenedorContacto,
+    .map {
+        max-width: 1200px;
+    }
+}
+
 @media screen and (max-width: 769px) {
+    .seccion-fichas2 {
+    width: 90%;
+    }
+    .seccion-todos {
+	margin: auto;
+	width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    /*font-size: 38px;*/
+	}
+	
+	.seccion-alta{ 
+	width: 60%;
+	margin:auto;
+
+	}
+
     .contacto{
         width: 100%;
     }
@@ -353,7 +380,7 @@ input[type=text]:focus,
     padding-bottom: 3rem;
     text-align: center;
     color: var(--color-principal);
-}
+	}
     .contenedorContacto{
         width: 100%;
         margin: 0px auto;
@@ -365,11 +392,87 @@ input[type=text]:focus,
     .map{
         width: 100%;
     }
+    
+    .botonesAdmon {
+    width: 80%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    margin: auto;
+    justify-content:center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    text-align: center;
+    
+	}
+    .cuadro-form {
+	width: 90%;
+	text-align: center;
+	font-size: 1rem;
+	}
 }
-@media screen and (min-width: 1200px) {
-    .contenedorAbout,
-    .contenedorContacto,
-    .map {
-        max-width: 1200px;
+
+@media screen and (max-width: 376px) {
+    .logo{
+        width: 70%;
     }
+    .menu{
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+    .menu li{
+    margin: 0.5rem;
+    }
+    .seccion-todos {
+	margin: auto;
+	width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    /*font-size: 38px;*/
+	}
+	.seccion-fichas2 {
+    width: 100%;
+    margin: 1rem auto;
+	}
+	.contenedor-fichas {
+    position: relative;
+    margin: 1rem;
+    width: 80%;
+    height: 25rem;
+	}
+	
+	.seccion-alta {
+	width: 90%;
+	margin: auto;
+	}
+	.botonesAdmon {
+    width: 70%;
+    display: grid;
+    grid-template-columns:1fr;
+    margin: auto;
+    justify-content:center;
+    align-items: flex-start;
+    text-align: center;
+    
+	}
+	.cuadro-form {
+	width: 270px;
+	text-align: center;
+	font-size: 1rem;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+

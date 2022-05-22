@@ -25,7 +25,7 @@
     text-align: left;	
 }
 .contenedorDetalles p{
-	font-size: 0.8rem;
+	font-size: 1rem;
     text-align: left;
     margin:0.5rem 0 0.3rem 0;	
 }
@@ -40,7 +40,7 @@
 }
 
 .detalles span{
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 500;
 }
 

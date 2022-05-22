@@ -32,20 +32,6 @@ header {
     width: 20%;
     margin: auto;
 }
-@media screen and (max-width: 600px) {
-    .cabecera{
-        grid-template-columns: 1fr;
-    }
-    .logo{
-        width: 35%;
-    }
-}
-@media screen and (min-width: 1200px) {
-    .cabecera{
-        width: 1200px;
-        margin: 0 auto;
-    }
-}
 
 /* ****************************************** NAV ****************************************** */
 nav{
@@ -53,7 +39,7 @@ nav{
     margin: 0 auto;
 }
 .menu{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -85,3 +71,42 @@ a:hover {
 .activa{
 	opacity: 0.6;
 }
+
+@media screen and (min-width: 1200px) {
+    .cabecera{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .logo{
+        width: 35%;
+    }
+    .menu{
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .logo{
+        width: 70%;
+    }
+    .menu{
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+    .menu li{
+    margin: 0.5rem;
+    }   
+}
+
+
+
+
+
+
+
